@@ -1,0 +1,33 @@
+@import 'src/assets/styles/colors';
+
+$light-paper-color: #b1ad97;
+
+.page-context-newspaper {
+  border: 2px solid $light-paper-color;
+  margin-top: -25px;
+  border-radius: 3px;
+
+  @at-root {
+    .page-context-newspaper__header {
+      color: $olive;
+      text-align: center;
+      font-size: 30px;
+      margin: 0;
+      padding: 10px 0 0;
+      border-bottom: 2px solid $light-paper-color;
+    }
+
+    .page-context-newspaper__subheader {
+      border-top: 2px solid $light-paper-color;
+      display: block;
+      margin-top: 10px;
+      padding: 5px 0;
+      font-size: 16px;
+    }
+
+    .page-context-newspaper__text {
+      padding: 10px;
+      color: #000;
+    }
+  }
+}

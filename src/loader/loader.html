@@ -1,0 +1,21 @@
+<!-- Pre-defined loader -->
+<div id="loader" class="loader">
+  <div class="loader__box">
+    <div class="loader__image"></div>
+    <div class="loader__loading-bar"></div>
+  </div>
+</div>
+<!-- Hides loader on load -->
+<script>
+  var LOADER_HIDE_TIME = 2000;
+
+  window.onload = function() {
+    var loader = document.querySelector('#loader');
+    loader.className += ' loader--hide';
+    document.body.className = '';
+    // Rendering optimizations
+    window.setTimeout(function() {
+      loader.outerHTML = '';
+    }, LOADER_HIDE_TIME);
+  };
+</script>

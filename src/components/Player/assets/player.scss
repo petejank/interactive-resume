@@ -1,0 +1,20 @@
+@import '~Player.scss';
+
+.player {
+  position: absolute;
+  z-index: 1000;
+  top: 220px;
+  left: 615px;
+
+  @at-root {
+    .player--batmobil {
+      left: 600px;
+      @include sprite($-player-batmobil);
+    }
+
+    .player--atruck {
+      left: 630px;
+      @include sprite($-player-atruck);
+    }
+  }
+}

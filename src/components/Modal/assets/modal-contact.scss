@@ -1,0 +1,15 @@
+@import 'src/assets/styles/colors';
+@import 'src/assets/styles/variables';
+
+.modal-dialog-contact {
+  .modal-content {
+    border-radius: 0;
+    border: 2px solid #ffa4a4;
+    background: #b34c4c;
+    box-shadow: none;
+
+    @media (min-width: $sm-res) {
+      box-shadow: 4px 4px 0px 1px $gray-medium-3;
+    }
+  }
+}

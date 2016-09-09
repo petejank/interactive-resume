@@ -1,0 +1,25 @@
+@import 'src/assets/styles/colors';
+
+.modal-dialog-webdev {
+  .modal-content {
+    border-radius: 5px;
+    border: 2px solid #ececec;
+    background: #464646;
+    box-shadow: none;
+
+    @media (min-width: $sm-res) {
+      box-shadow: 3px 3px 0px 2px $gray-medium-2;
+    }
+  }
+
+  .modal-body {
+    margin: 0!important;
+    padding: 0!important;
+  }
+
+  .modal-header {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+}

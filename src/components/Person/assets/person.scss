@@ -1,0 +1,158 @@
+@import '~Person.scss';
+
+.person {
+  position: absolute;
+
+  @at-root {
+    .person--beach1 {
+      top: 265px;
+      left: -315px;
+      @include sprite($-person-beach1);
+    }
+
+    .person--beach2 {
+      top: 260px;
+      left: -300px;
+      @include sprite($-person-beach2);
+    }
+
+    .person--guy1-briefcase {
+      top: 225px;
+      right: 147px;
+      @include sprite($-person-guy1-briefcase);
+    }
+
+    .person--guy2-bag {
+      top: 226px;
+      right: 124px;
+      @include sprite($-person-guy2-bag);
+    }
+
+    .person--guy3-briefcase {
+      top: 52px;
+      right: 325px;
+      @include sprite($-person-guy3-briefcase);
+    }
+
+    .person--guy4-newspaper {
+      top: 120px;
+      right: 111px;
+      @include sprite($-person-guy4-newspaper);
+    }
+
+    .person--guy5-jumping1 {
+      top: 88px;
+      right: 380px;
+      @include sprite($-person-guy5-jumping1);
+    }
+
+    .person--guy6-jumping2 {
+      top: 93px;
+      right: 344px;
+      @include sprite($-person-guy6-jumping2);
+    }
+
+    .person--guy7-cheering {
+      top: 98px;
+      right: 176px;
+      @include sprite($-person-guy7-cheering);
+    }
+
+    .person--girl8-sitting {
+      top: 134px;
+      right: 92px;
+      @include sprite($-person-girl8-sitting);
+    }
+
+    .person--guy9-fishing {
+      top: 365px;
+      right: 375px;
+      @include sprite($-person-guy9-fishing);
+    }
+
+    .person--guy10-bag {
+      top: 198px;
+      right: 425px;
+      @include sprite($-person-guy10-bag);
+    }
+
+    .person--guy11-bag {
+      top: 215px;
+      right: 405px;
+      @include sprite($-person-guy11-bag);
+    }
+
+    .person--girl12-laptop {
+      top: 208px;
+      right: 113px;
+      @include sprite($-person-girl12-laptop);
+    }
+
+    .person--guy13-jumping {
+      top: 362px;
+      right: 75px;
+      @include sprite($-person-guy13-jumping);
+    }
+
+
+    .person--guy14-skating {
+      top: 170px;
+      left: -180px;
+      @include sprite($-person-guy14-skating);
+    }
+
+    .person--girl15-gameboy {
+      top: 275px;
+      right: 105px;
+      @include sprite($-person-girl15-gameboy);
+    }
+
+    .person--guy16-manhole {
+      top: 248px;
+      left: -180px;
+      @include sprite($-person-guy16-manhole);
+    }
+
+    .person--guy17-photo {
+      top: 345px;
+      left: 130px;
+      @include sprite($-person-guy17-photo);
+    }
+
+    .person--radio {
+      top: 377px;
+      left: 158px;
+      @include sprite($-person-radio);
+    }
+
+    .person--pair18-photo {
+      top: 33px;
+      left: 165px;
+      @include sprite($-person-pair18-photo);
+    }
+
+    .person--guy19-icecream {
+      top: 220px;
+      left: -170px;
+      @include sprite($-person-guy19-icecream);
+    }
+
+    .person--guy20-mib {
+      top: 330px;
+      left: 55px;
+      @include sprite($-person-guy20-mib);
+    }
+
+    .person--guy21-doc {
+      top: 334px;
+      left: 71px;
+      @include sprite($-person-guy21-doc);
+    }
+
+    .person--guy22-doc2 {
+      top: 342px;
+      left: 96px;
+      @include sprite($-person-guy22-doc2);
+    }
+  }
+}

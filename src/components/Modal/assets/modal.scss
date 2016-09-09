@@ -1,0 +1,52 @@
+@import '~bootstrap-sass/assets/stylesheets/bootstrap/mixins';
+@import '~bootstrap-sass/assets/stylesheets/bootstrap/variables';
+@import '~bootstrap-sass/assets/stylesheets/bootstrap/component-animations';
+@import '~bootstrap-sass/assets/stylesheets/bootstrap/close';
+@import '~bootstrap-sass/assets/stylesheets/bootstrap/modals';
+@import 'src/assets/styles/variables';
+@import 'modal-newspaper';
+@import 'modal-xp';
+@import 'modal-webdev';
+@import 'modal-games';
+@import 'modal-mobile';
+@import 'modal-lab';
+@import 'modal-contact';
+
+.modal {
+  z-index: 21000;
+
+  &.fade {
+    @media (max-width: $sm-res) {
+      transition: none;
+      .modal-dialog {
+        transition: none;
+      }
+    }
+  }
+
+  .modal-header {
+    border: 0;
+
+    .close {
+      position: relative;
+      z-index: 22000;
+      color: #FFF;
+      text-shadow: none;
+      opacity: 1;
+
+      &:hover {
+        color: #000;
+      }
+    }
+  }
+}
+
+.modal-backdrop {
+  z-index: 20000;
+
+  &.fade {
+    @media (max-width: $sm-res) {
+      transition: none;
+    }
+  }
+}

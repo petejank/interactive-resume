@@ -1,0 +1,9 @@
+@import '~Lamps.scss';
+
+.lamps {
+  position: absolute;
+  z-index: 500;
+  top: 295px;
+  left: 1033px;
+  @include sprite($-lamps-lamps);
+}
