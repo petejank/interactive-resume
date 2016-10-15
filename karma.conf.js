@@ -14,7 +14,6 @@ module.exports = (config) => {
     reporters: ['dots'],
     webpack: {
       context: __dirname,
-      devtool: 'inline-source-map',
       resolve: { // Root directory
         root: [
           path.resolve('./src')
@@ -41,6 +40,10 @@ module.exports = (config) => {
           {
             test: /\.scss|css|ttf|svg|eot|woff$/,
             loader: 'ignore-loader'
+          },
+          {
+            test: /\.json$/,
+            loader: 'json-loader'
           }
         ]
       }
