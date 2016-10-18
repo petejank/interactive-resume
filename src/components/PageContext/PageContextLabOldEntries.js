@@ -18,7 +18,7 @@ export default [
   {
     type: 'Online game',
     title: 'Massive Tanks',
-    link: 'https://github.com/LetsCoders/MassiveTanks',
+    link: 'github.com/LetsCoders/MassiveTanks',
     description: `Once upon a time me and my lads attended a programming contest. We've create a base of a small online
       tank busting action game. I was responsible for the front-end section, rest of my team did all the work on
       back-end. After the contest, we've decided to spend some time tuning the game up and to release the source in a

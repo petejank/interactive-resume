@@ -25,4 +25,4 @@ Just type `npm run <taskNameHere>`. Tasks list:
 
 Code is licensed under MIT License
 
-All .png files are licensed under CC BY 3.0[https://creativecommons.org/licenses/by/3.0/]
+All .png files are licensed under [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/)
