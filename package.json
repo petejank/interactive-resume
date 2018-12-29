@@ -6,7 +6,7 @@
   "scripts": {
     "watch": "rm -rf dist && webpack --progress --colors --watch --config ./build.config.js",
     "build": "rm -rf dist && webpack --config ./build.config.js",
-    "build-prod": "rm -rf dist && NODE_ENV=production webpack --config ./build.config.js",
+    "build:prod": "rm -rf dist && NODE_ENV=production webpack --config ./build.config.js",
     "test": "karma start karma.conf.js"
   },
   "devDependencies": {
