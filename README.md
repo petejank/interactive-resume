@@ -1,25 +1,19 @@
 ![Piotr Jankowski Interactive Resume](logo.png "Piotr Jankowski Interactive Resume")
 
 # What's this?
-It's my personal interactive resume project developed with ReactJS and tiny bit of Redux. Includes build and watch processes based on Webpack.
+It's my personal interactive resume project developed with ReactJS and tiny bit of Redux.
 
 Live version is available at http://jankowskiresume.com.
 
 ## Available run scripts
-Remember to first install required node dependencies through `npm install`.
+Remember to first install required node dependencies through `yarn install`.
 
-Just type `npm run <taskNameHere>`. Tasks list:
+Just type `yarn <taskNameHere>`. Tasks list:
 
-- watch - build project in development mode and initializes change watcher,
-- build - build project for development purposes,
-- build-prod - build project with production settings, including minification and similar,
-- test - run karma to process all available tests.
-
-## Todo
-
-- add missing tests to PageContext and CarPicker,
-- attach Travis,
-- add people animation.
+- `watch` - build project in development mode and initialize a watcher,
+- `build` - build project for development purposes,
+- `build-prod` - build project using production settings,
+- `test` - run karma to process all available tests.
 
 ## License
 
