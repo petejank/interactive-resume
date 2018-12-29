@@ -1,6 +1,5 @@
 'use strict';
 
-const fs = require('fs');
 const path = require('path');
 const spritesmithPlugin = require('webpack-spritesmith');
 const spriteDirectories = require('./sprite.directories');
