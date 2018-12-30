@@ -1,0 +1,84 @@
+{
+  "parser": "babel-eslint",
+  "extends": ["standard", "standard-jsx", "standard-react", "plugin:jest/recommended"],
+  "plugins": ["jest", "react", "standard"],
+  "rules": {
+    "jest/no-disabled-tests": "error",
+    "jest/no-identical-title": "off",
+    "react/jsx-no-bind": "off",
+    "react/prop-types": ["error"],
+    "react/jsx-uses-vars": 2,
+    "react/jsx-uses-react": 1,
+    "react/self-closing-comp": "error",
+    "react/jsx-tag-spacing": ["error", {
+      "beforeSelfClosing": "always",
+      "afterOpening": "never",
+      "closingSlash": "never"
+    }],
+    "jsx-quotes": ["error", "prefer-single"],
+    "no-console": 2,
+    "no-trailing-spaces": 2,
+    "block-spacing": 0,
+    "standard/no-callback-literal": "off",
+    "prefer-promise-reject-errors": "off",
+    "import/no-webpack-loader-syntax": "off",
+    "camelcase": 2,
+    "no-unexpected-multiline": 2,
+    "dot-location": [2, "property"],
+    "no-implicit-coercion": [2, {"boolean": false}],
+    "no-invalid-this": 0,
+    "no-self-compare": 2,
+    "no-unused-vars": 2,
+    "radix": 0,
+    "wrap-iife": 2,
+    "array-bracket-spacing": [2, "never"],
+    "brace-style": [2, "1tbs", {"allowSingleLine": true}],
+    "comma-style": [2, "last"],
+    "computed-property-spacing": [2, "never"],
+    "dot-notation": 0,
+    "indent": [2, 2, {"SwitchCase": 1}],
+    "linebreak-style": [2, "unix"],
+    "no-multiple-empty-lines": [2, {"max": 1}],
+    "no-nested-ternary": 2,
+    "no-underscore-dangle": 0,
+    "no-unneeded-ternary": 2,
+    "object-curly-spacing": [2, "never"],
+    "operator-assignment": [2, "always"],
+    "operator-linebreak": [2, "before"],
+    "padded-blocks": [2, "never"],
+    "quotes": [2, "single", "avoid-escape"],
+    "semi": [2, "never"],
+    "keyword-spacing": 2,
+    "space-before-blocks": [2, "always"],
+    "space-before-function-paren": [2, "never"],
+    "space-in-parens": [2, "never"],
+    "spaced-comment": [2, "always"],
+    "arrow-parens": [2, "always"],
+    "arrow-spacing": 2,
+    "no-class-assign": 2,
+    "no-const-assign": 2,
+    "no-this-before-super": 2,
+    "no-var": 2,
+    "object-shorthand": [2, "always"],
+    "prefer-const": 2
+  },
+  "env": {
+    "browser": true,
+    "node": true,
+    "jest": true
+  },
+  "globals": {
+    "context": true,
+    "window": true,
+    "document": true,
+    "$": true
+  },
+  "overrides": [
+    {
+      "files": ["*.test.jsx", "*.test.js"],
+      "rules": {
+        "react/prop-types": ["error", {"skipUndeclared": true}]
+      }
+    }
+  ]
+}

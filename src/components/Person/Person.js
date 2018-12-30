@@ -1,9 +1,9 @@
-'use strict';
+'use strict'
 
-import './assets/person.scss';
+import './assets/person.scss'
 
-import React, {PropTypes} from 'react';
-import classNames from 'classnames';
+import React, {PropTypes} from 'react'
+import classNames from 'classnames'
 
 export default React.createClass({
   propTypes: {
@@ -13,12 +13,12 @@ export default React.createClass({
     const personClass = classNames({
       'person': true,
       [`person--${this.props.personClass}`]: true
-    });
+    })
 
     return (
       <div className={personClass}>
         {this.props.children}
       </div>
-    );
+    )
   }
-});
+})

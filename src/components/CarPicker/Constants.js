@@ -1,3 +1,3 @@
-'use strict';
+'use strict'
 
-export const SLIDE_OUT_TIMEOUT = 1000;
+export const SLIDE_OUT_TIMEOUT = 1000

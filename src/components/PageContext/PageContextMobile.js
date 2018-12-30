@@ -1,24 +1,23 @@
-'use strict';
+'use strict'
 
-import './assets/page-context-mobile.scss';
-import 'assets/styles/emboss.scss';
+import './assets/page-context-mobile.scss'
+import 'assets/styles/emboss.scss'
 
-import React from 'react';
-import classNames from 'classnames';
-import TooltipModal from 'components/TooltipModal/TooltipModal';
+import React from 'react'
+import TooltipModal from 'components/TooltipModal/TooltipModal'
 
 export default React.createClass({
   render() {
     return (
-      <TooltipModal tooltipText="Selfie.. I mean mobile apps time" modalClass="modal-dialog-mobile">
+      <TooltipModal tooltipText='Selfie.. I mean mobile apps time' modalClass='modal-dialog-mobile'>
         <section>
-          <div className="page-context-mobile">
-            <h2 className="page-context-mobile__header">
+          <div className='page-context-mobile'>
+            <h2 className='page-context-mobile__header'>
               Mobile Development Is The Key
-              <span className="page-context-mobile__subheader"> Well, tapping is popular nowadays</span>
+              <span className='page-context-mobile__subheader'> Well, tapping is popular nowadays</span>
             </h2>
             <p>
-              Here's <span className="emboss-dark-yellow">a small assembly of languages/techs I use to make mobile
+              Here's <span className='emboss-dark-yellow'>a small assembly of languages/techs I use to make mobile
               tapping magic happen.</span> Most of my techniques are focused around applying web front-end technologies
               to native application wrappers:
             </p>
@@ -28,9 +27,9 @@ export default React.createClass({
               <li>plenty of libraries/frameworks mentioned in WebDev section</li>
             </ul>
           </div>
-          <div className="page-context-mobile__footer"></div>
+          <div className='page-context-mobile__footer' />
         </section>
       </TooltipModal>
-    );
+    )
   }
-});
+})

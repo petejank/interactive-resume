@@ -1,4 +1,4 @@
-const path = require('path');
+const path = require('path')
 
 module.exports = (config) => {
   config.set({
@@ -32,7 +32,7 @@ module.exports = (config) => {
           /node_modules\/sinon\//
         ],
         loaders: [
-          { //transpile ES2015 with JSX into ES5
+          { // transpile ES2015 with JSX into ES5
             test: /\.js$/,
             exclude: /node_modules/,
             loader: 'babel?presets[]=react,presets[]=es2015'
@@ -52,5 +52,5 @@ module.exports = (config) => {
       noInfo: true,
       stats: 'errors-only'
     }
-  });
-};
+  })
+}

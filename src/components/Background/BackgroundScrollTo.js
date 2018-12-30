@@ -1,21 +1,22 @@
-'use strict';
+'use strict'
 
-import * as Constants from './Constants';
+import * as Constants from './Constants'
 
-let currentIndex = 0;
+let currentIndex = 0
 
 export default {
   moveForward() {
-    const lastIndex = Constants.BACKGROUND_SUBCLASSES.length - 1;
-    return (currentIndex === lastIndex ? lastIndex : ++currentIndex);
+    const lastIndex = Constants.BACKGROUND_SUBCLASSES.length - 1
+    return (currentIndex === lastIndex ? lastIndex : ++currentIndex)
   },
   moveBackward() {
-    return currentIndex === 0 ? 0 : --currentIndex;
+    return currentIndex === 0 ? 0 : --currentIndex
   },
   resetIndex() {
-    return currentIndex = 0;
+    currentIndex = 0
+    return currentIndex
   },
   getIndex() {
-    return currentIndex;
+    return currentIndex
   }
-};
+}

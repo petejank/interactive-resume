@@ -1,10 +1,10 @@
-'use strict';
+'use strict'
 
-import * as actions from './PlayerActions';
+import * as actions from './PlayerActions'
 
 const DEFAULT_STATE = {
   playerCar: null
-};
+}
 
 export default (state = DEFAULT_STATE, action) => {
   switch (action.type) {
@@ -12,10 +12,10 @@ export default (state = DEFAULT_STATE, action) => {
       return {
         ...state,
         playerCar: action.value
-      };
+      }
     }
     default: {
-      return state;
+      return state
     }
   }
-};
+}

@@ -1,4 +1,4 @@
-'use strict';
+'use strict'
 
 export default [
   {
@@ -25,4 +25,4 @@ export default [
       and provides basic functions for everyday MTG games. Base technologies used: Apache Cordova (wrapper), ReactJS,
       React-Router, Redux, Ramda.`
   }
-];
+]

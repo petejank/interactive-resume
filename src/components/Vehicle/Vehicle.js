@@ -1,9 +1,9 @@
-'use strict';
+'use strict'
 
-import './assets/vehicle.scss';
+import './assets/vehicle.scss'
 
-import React, {PropTypes} from 'react';
-import classNames from 'classnames';
+import React, {PropTypes} from 'react'
+import classNames from 'classnames'
 
 export default React.createClass({
   propTypes: {
@@ -13,10 +13,10 @@ export default React.createClass({
     const vehicleClass = classNames({
       'vehicle': true,
       [`vehicle--${this.props.vehicleClass}`]: true
-    });
+    })
 
     return (
-      <div className={vehicleClass}></div>
-    );
+      <div className={vehicleClass} />
+    )
   }
-});
+})

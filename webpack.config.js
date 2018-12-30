@@ -1,14 +1,14 @@
 const autoprefixer = require('autoprefixer')
-const path = require('path');
-const webpack = require('webpack');
+const path = require('path')
+const webpack = require('webpack')
 
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
-const spritePlugins = require('./sprite.plugins');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
+const spritePlugins = require('./sprite.plugins')
 
-const isProduction = process.env.NODE_ENV === 'production';
+const isProduction = process.env.NODE_ENV === 'production'
 
 module.exports = {
   context: __dirname,
@@ -19,7 +19,7 @@ module.exports = {
     modules: ['node_modules', 'spritesmith', path.resolve('./src')]
   },
   output: {
-    path: path.resolve(`./dist`),
+    path: path.resolve('./dist'),
     filename: isProduction ? '[name].[hash].js' : '[name].js'
   },
   optimization: {
@@ -141,7 +141,7 @@ module.exports = {
       [
         {
           from: 'favicons',
-          to: `favicons`
+          to: 'favicons'
         }
       ]
     ),
@@ -149,6 +149,6 @@ module.exports = {
       'process.env.NODE_ENV': `"${process.env.NODE_ENV}"`
     }),
     // Sprites building
-    ...spritePlugins(),
-  ],
-};
+    ...spritePlugins()
+  ]
+}

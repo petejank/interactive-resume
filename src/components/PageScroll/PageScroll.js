@@ -1,13 +1,13 @@
-'use strict';
+'use strict'
 
-import './assets/page-scroll.scss';
+import './assets/page-scroll.scss'
 
-import React from 'react';
+import React from 'react'
 
 export default React.createClass({
   render() {
     return (
-      <div className="page-scroll"></div>
-    );
+      <div className='page-scroll' />
+    )
   }
-});
+})

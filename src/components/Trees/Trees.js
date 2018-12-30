@@ -1,13 +1,13 @@
-'use strict';
+'use strict'
 
-import './assets/trees.scss';
+import './assets/trees.scss'
 
-import React from 'react';
+import React from 'react'
 
 export default React.createClass({
   render() {
     return (
-      <div className="trees"></div>
+      <div className='trees' />
     )
   }
-});
+})

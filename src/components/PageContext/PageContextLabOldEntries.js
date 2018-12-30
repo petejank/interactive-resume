@@ -1,4 +1,4 @@
-'use strict';
+'use strict'
 
 export default [
   {
@@ -32,4 +32,4 @@ export default [
       a bit. It was my first finished project in Unity3D as far as I reckon. Don't know if the source code will work now
       in latest Unity3D releases, but you can certainly watch the video available on the website.`
   }
-];
+]

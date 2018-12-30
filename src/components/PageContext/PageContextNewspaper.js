@@ -1,23 +1,23 @@
-'use strict';
+'use strict'
 
-import './assets/page-context-newspaper.scss';
+import './assets/page-context-newspaper.scss'
 
-import React from 'react';
-import TooltipModal from 'components/TooltipModal/TooltipModal';
+import React from 'react'
+import TooltipModal from 'components/TooltipModal/TooltipModal'
 
 export default React.createClass({
   render() {
     return (
-      <TooltipModal tooltipText="About me" modalClass="modal-dialog-newspaper">
+      <TooltipModal tooltipText='About me' modalClass='modal-dialog-newspaper'>
         <section>
-          <div className="page-context-newspaper">
-            <h2 className="page-context-newspaper__header">
+          <div className='page-context-newspaper'>
+            <h2 className='page-context-newspaper__header'>
               All About Piotr Jankowski
-              <span className="page-context-newspaper__subheader">
+              <span className='page-context-newspaper__subheader'>
                 Extra, extra, read all about it!
               </span>
             </h2>
-            <div className="page-context-newspaper__text">
+            <div className='page-context-newspaper__text'>
               <p>
                 <strong>Who am I?</strong>
               </p>
@@ -50,6 +50,6 @@ export default React.createClass({
           </div>
         </section>
       </TooltipModal>
-    );
+    )
   }
-});
+})

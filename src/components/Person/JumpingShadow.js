@@ -1,13 +1,13 @@
-'use strict';
+'use strict'
 
-import './assets/jumping-shadow.scss';
+import './assets/jumping-shadow.scss'
 
-import React, {PropTypes} from 'react';
+import React from 'react'
 
 export default React.createClass({
   render() {
     return (
-      <div className="jumping-shadow"></div>
-    );
+      <div className='jumping-shadow' />
+    )
   }
-});
+})

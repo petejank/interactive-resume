@@ -1,17 +1,17 @@
-'use strict';
+'use strict'
 
 export const history = [
   {
     timespan: '06.2014 - 10.2016',
     company: '-',
     jobTitle: 'Private Projects Development',
-    description: `Created this interactive resume, Space Rabbit Unity3D mobile game and Tiny Life Counter hybrid application`
+    description: 'Created this interactive resume, Space Rabbit Unity3D mobile game and Tiny Life Counter hybrid application'
   },
   {
     timespan: '04.2014 - 06.2016',
     company: 'Currency One',
     jobTitle: 'Front-end Developer',
-    description: `Wide front-end development using Javascript, CSS, HTML, AngularJS and Backbone.js`
+    description: 'Wide front-end development using Javascript, CSS, HTML, AngularJS and Backbone.js'
   },
   {
     timespan: '05.2013 - 03.2014',
@@ -24,7 +24,7 @@ export const history = [
     timespan: '07.2011 - 10.2012',
     company: 'WebDoctor',
     jobTitle: 'Programmer',
-    description: `Development and maintenance of internal company\'s applications and external websites. Technologies
+    description: `Development and maintenance of internal company's applications and external websites. Technologies
       used: PHP, Symfony Framework 2.x, JavaScript with jQuery and MySQL database. Operating system used at work: Linux.`
   },
   {
@@ -41,4 +41,4 @@ export const history = [
     description: `Preparation of emails using XHTML/HTML/CSS technologies, development of local web portal.
       Technologies used: PHP, Symfony Framework 1.4, MySQL, JavaScript with jQuery.`
   }
-];
+]
