@@ -21,7 +21,7 @@ export default class PageContextXpAccordion extends PureComponent {
     })
 
     return (
-      <PanelGroup accordion id='xp-accordion' bsClass='page-context-accordion'>
+      <PanelGroup id='xp-accordion' bsClass='page-context-accordion'>
         {historyEntries}
       </PanelGroup>
     )

@@ -45,7 +45,8 @@
       color: $yellow;
       vertical-align: middle;
       display: inline-block;
-      width: 130px;
+      text-align: center;
+      width: 120px;
     }
 
     .page-context-accordion__text-box {
@@ -75,7 +76,7 @@
       display: inline-block;
       vertical-align: middle;
       border-left: 1px solid $yellow;
-      margin-left: 137px;
+      margin-left: 127px;
       padding-left: 7px;
       color: $orange-light;
       word-break: break-all;
@@ -97,11 +98,11 @@
     }
 
     .page-context-accordion__left-info--right {
-        text-align: right;
+      text-align: right;
 
-        @media (max-width: $l-res) {
-          text-align: center;
-        }
+      @media (max-width: $l-res) {
+        text-align: center;
+      }
     }
   }
 }

@@ -27,7 +27,7 @@ export default class PageContextLabAccordion extends PureComponent {
     })
 
     return (
-      <PanelGroup accordion id='lab-accordion' bsClass='page-context-accordion'>
+      <PanelGroup id='lab-accordion' bsClass='page-context-accordion'>
         {labEntries}
       </PanelGroup>
     )
