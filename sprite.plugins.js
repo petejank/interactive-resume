@@ -1,5 +1,3 @@
-'use strict'
-
 const path = require('path')
 const SpritesmithPlugin = require('webpack-spritesmith')
 const spriteDirectories = require('./sprite.directories')
@@ -11,8 +9,8 @@ module.exports = () => componentsDirs.map((directory) => {
   const targetFileName = `./spritesmith/${directory}`
   return new SpritesmithPlugin({
     src: {
-      cwd: path.resolve(`./src/components/${directory}`),
-      glob: 'assets/*.png'
+      cwd: path.resolve(`./src/components/${directory}/assets/images`),
+      glob: '*.png'
     },
     target: {
       image: path.resolve(`${targetFileName}.png`),
@@ -22,7 +20,7 @@ module.exports = () => componentsDirs.map((directory) => {
       generateSpriteName: (fileName) => {
         const parsed = path.parse(fileName)
         const dir = parsed.dir.split(path.sep)
-        const moduleName = dir[dir.length - 2]
+        const moduleName = dir[dir.length - 3]
 
         return `${moduleName}-${parsed.name}`
       },

@@ -16,6 +16,7 @@ module.exports = {
   mode: process.env.NODE_ENV || 'development',
   devtool: isProduction ? 'source-map' : 'inline-source-map',
   resolve: {
+    extensions: ['.js', '.jsx'],
     modules: ['node_modules', 'spritesmith', path.resolve('./src')]
   },
   output: {
@@ -39,9 +40,13 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js$/,
-        exclude: /node_modules|test/,
+        test: /\.jsx?$/,
+        exclude: /node_modules/,
         loader: 'babel-loader'
+      },
+      {
+        test: /index\.jsx?$/,
+        loader: 'baggage-loader?style.scss'
       },
       {
         test: /\.css$/,

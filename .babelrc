@@ -1,6 +1,7 @@
 {
   "presets": ["@babel/preset-env", "@babel/preset-react"],
   "plugins": [
-    ["import", {"libraryName": "react-bootstrap", "libraryDirectory": "lib"}, "react-bootstrap"],
+    "@babel/plugin-proposal-class-properties",
+    ["import", {"libraryName": "react-bootstrap", "libraryDirectory": "lib", "camel2DashComponentName": false}, "react-bootstrap"],
   ]
 }

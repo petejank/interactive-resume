@@ -7,11 +7,12 @@
     "watch": "rm -rf dist && webpack-dev-server",
     "build": "rm -rf dist && webpack",
     "build:prod": "rm -rf dist && NODE_ENV=production webpack",
-    "lint": "eslint . --ext .js,.jsx --ignore-pattern test",
+    "lint": "eslint src --ext .js,.jsx --ignore-pattern test.*",
     "test": "karma start karma.conf.js"
   },
   "devDependencies": {
     "@babel/core": "^7.2.2",
+    "@babel/plugin-proposal-class-properties": "^7.2.3",
     "@babel/preset-env": "^7.2.2",
     "@babel/preset-react": "^7.0.0",
     "@babel/template": "^7.2.2",
@@ -20,6 +21,7 @@
     "babel-eslint": "^10.0.1",
     "babel-loader": "^8.0.4",
     "babel-plugin-import": "^1.11.0",
+    "baggage-loader": "^1.0.0",
     "chai": "^3.5.0",
     "copy-webpack-plugin": "^4.6.0",
     "css-loader": "^2.1.0",

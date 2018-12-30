@@ -8,11 +8,12 @@ import 'assets/styles/base.scss'
 import React from 'react'
 import ReactDOM from 'react-dom'
 import {Provider} from 'react-redux'
-import store from 'store/store'
-import PageContext from 'components/PageContext/PageContext'
-import PageScroll from 'components/PageScroll/PageScroll'
-import CarPicker from 'components/CarPicker/CarPicker'
+
+import PageContext from 'components/PageContext'
+import PageScroll from 'components/PageScroll'
+import CarPicker from 'components/CarPicker'
 import scroll from 'other/scroll'
+import store from 'store'
 
 scroll.resetScroll()
 
