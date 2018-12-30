@@ -31,7 +31,7 @@ export default React.createClass({
     return (
       <Modal show={this.state.showModal} onHide={this.close} onExited={this.props.onExited}
         onEnter={this.props.onEnter} dialogClassName={modalClass}>
-        <Modal.Header closeButton/>
+        <Modal.Header closeButton closeLabel={false}/>
         <Modal.Body>
           {this.props.children}
         </Modal.Body>

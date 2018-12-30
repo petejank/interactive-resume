@@ -24,7 +24,6 @@ import PageContextContact from './PageContextContact';
 import * as constants from './Constants';
 import store from 'store/store';
 import getCenteredOffset from './GetCenteredOffset';
-import document from 'other/document';
 
 export default React.createClass({
   componentDidMount() {

@@ -54,13 +54,13 @@
   "dependencies": {
     "bootstrap-sass": "^3.3.7",
     "classnames": "^2.2.5",
-    "jquery": "^3.1.0",
     "normalize.css": "^4.2.0",
     "react": "^15.3.1",
-    "react-bootstrap": "^0.30.3",
+    "react-bootstrap": "^0.32.4",
     "react-dom": "^15.3.1",
     "react-redux": "^4.4.5",
-    "redux": "^3.6.0"
+    "redux": "^3.6.0",
+    "velocity-animate": "^1.5.2"
   },
   "author": "",
   "license": "MIT for code, CC BY 3.0 for .png files"

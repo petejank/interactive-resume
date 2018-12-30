@@ -4,11 +4,10 @@ import './assets/page-context-contact.scss';
 import './assets/page-context-contact-form.scss';
 
 import React from 'react';
-import $ from 'jquery';
 
-import window from 'other/window';
 import TooltipModal from 'components/TooltipModal/TooltipModal';
 
+const SUCCESS_STATUS_REGEXP = /^20/
 // Just some bot scanning protection
 const mail = 'piotr.jankowski.resume' + '@gmail.com';
 
@@ -28,34 +27,32 @@ export default React.createClass({
   },
   handleSubmit(event) {
     event.preventDefault();
+
+    const {payload} = this.state
     // Thrivial hidden verification
-    if (this.state.payload.name && this.state.payload.senderEmail && this.state.payload.message) {
+    if (payload.name && payload.senderEmail && payload.message) {
       this.setState({
         status: 'sending'
       });
 
-      $.ajax({
-        url: `https://formspree.io/${mail}`,
+      fetch(`https://formspree.io/${mail}`, {
         method: 'POST',
-        data: this.state.payload,
-        dataType: 'json'
-      }).then((data) => {
-        // Add send handling
-        this.setState({
-          status: 'sent'
-        });
-      }, () => {
-        this.setState({
-          status: 'error'
-        });
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(payload),
+      })
+      .then(({status}) => {
+        this.setState({status: SUCCESS_STATUS_REGEXP.test(status.toString()) ? 'sent' : 'error'});
       });
     }
   },
-  inputChange(event) {
+  inputChange({target: {name, value}}) {
     this.setState({
-      payload: $.extend({}, this.state.payload, {
-        [event.target.name]: event.target.value
-      })
+      payload: {
+        ...this.state.payload,
+        [name]: value
+      }
     });
   },
   render() {

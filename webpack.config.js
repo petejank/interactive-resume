@@ -151,8 +151,4 @@ module.exports = {
     // Sprites building
     ...spritePlugins(),
   ],
-  devServer: {
-    noInfo: true,
-    stats: 'errors-only'
-  }
 };

@@ -1,7 +1,5 @@
 'use strict';
 
-import window from 'other/window';
-
 const PAGE_CONTEXT_CENTER_MOD = 450;
 const NEW_OFFSET_FIX = 20;
 

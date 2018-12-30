@@ -7,9 +7,7 @@ import store from 'store/store';
 import backgroundScroll from './BackgroundScroll';
 import backgroundScrollTo from './BackgroundScrollTo';
 
-import window, {$window} from 'other/window';
 import * as Constants from './Constants';
-import $ from 'jquery';
 
 export default React.createClass({
   getInitialState() {
@@ -34,16 +32,15 @@ export default React.createClass({
     const unsubscribe = store.subscribe(() => {
       if (store.getState().playerState.playerCar) {
         // Desktop interface
-
         if (window.screen.width >= Constants.BACKGROUND_MIN_ARROW_DISPLAY_RES &&
-           !('ontouchstart' in window || window.navigator.msMaxTouchPoints)) {
+          !('ontouchstart' in window || window.navigator.msMaxTouchPoints)) {
           this.setState({arrowInterface: false});
-          $window.scroll(() => {
+          window.addEventListener('scroll', (event) => {
             if (this.state.initialDisplay) {
               removeInfo.call(this);
             }
 
-            backgroundScroll(this.$backgroundElm)
+            backgroundScroll(this.backgroundElm);
           });
         }
 
@@ -54,7 +51,7 @@ export default React.createClass({
   render() {
     return (
       <div className={'background ' + this.state.backgroundClass}
-        ref={backgroundElm => this.$backgroundElm = $(backgroundElm)}>
+        ref={backgroundElm => this.backgroundElm = backgroundElm}>
         {getBottomScreenInterface.call(this)}
         {this.props.children}
       </div>
@@ -68,26 +65,26 @@ function getBottomScreenInterface() {
       <div>
         <a className="background__arrow background__arrow--left" onClick={() => this.move('Backward')}></a>
         <div className="background__scroll-info background__scroll-info--mobile"
-          ref={backgroundInterfaceInfo => this.$backgroundInterfaceInfo = $(backgroundInterfaceInfo)}>
+          ref={backgroundInterfaceInfo => this.backgroundInterfaceInfo = backgroundInterfaceInfo}>
             Tap these arrows to move
           </div>
         <a className="background__arrow background__arrow--right" onClick={() => this.move('Forward')}></a>
       </div>
     );
-  } else {
-    return (
-      <div className="background__scroll-info"
-        ref={backgroundInterfaceInfo => this.$backgroundInterfaceInfo = $(backgroundInterfaceInfo)}>
-          Scroll to move the car
-        </div>
-    );
   }
+
+  return (
+    <div className="background__scroll-info"
+      ref={backgroundInterfaceInfo => this.backgroundInterfaceInfo = backgroundInterfaceInfo}>
+        Scroll to move the car
+      </div>
+  );
 }
 
 function removeInfo() {
   this.setState({initialDisplay: false});
   // Remove scroll info
   window.setTimeout(() => {
-    this.$backgroundInterfaceInfo.remove();
+    this.backgroundInterfaceInfo.parentNode.removeChild(this.backgroundInterfaceInfo)
   }, Constants.BACKGROUND_INFO_TIMEOUT);
 }

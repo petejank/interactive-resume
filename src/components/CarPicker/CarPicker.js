@@ -7,7 +7,6 @@ import {connect} from 'react-redux';
 import * as PlayerActions from 'store/Player/PlayerActions';
 import classNames from 'classnames';
 import CarPickerContainer from './CarPickerContainer';
-import window from 'other/window';
 import * as Constants from './Constants';
 
 const stateToProps = (store) => ({
