@@ -1,7 +1,7 @@
 'use strict';
 
-export const SCROLL_MAX_LEFT = -3805;
-export const SCROLL_MAX_TOP = -1904;
+export const SCROLL_MAX_LEFT = -3705;
+export const SCROLL_MAX_TOP = -1852;
 export const SCROLL_DURATION = 1500;
 
 export const BACKGROUND_INFO_TIMEOUT = 1500;

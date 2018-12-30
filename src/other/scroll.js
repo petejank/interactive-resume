@@ -17,7 +17,6 @@ export default {
   resetScroll() {
     // Basically a workaround to reset scroll position on possible next page load
     window.addEventListener('beforeunload', (event) => {
-      event.preventDefault();
       window.scrollTo(0, 0);
     });
   }

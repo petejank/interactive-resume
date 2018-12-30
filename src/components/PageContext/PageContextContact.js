@@ -9,7 +9,7 @@ import TooltipModal from 'components/TooltipModal/TooltipModal';
 
 const SUCCESS_STATUS_REGEXP = /^20/
 // Just some bot scanning protection
-const mail = 'piotr.jankowski.resume' + '@gmail.com';
+const MAIL = 'piotr.jankowski.resume' + '@gmail.com';
 
 export default React.createClass({
   getInitialState() {
@@ -35,7 +35,7 @@ export default React.createClass({
         status: 'sending'
       });
 
-      fetch(`https://formspree.io/${mail}`, {
+      fetch(`https://formspree.io/${MAIL}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

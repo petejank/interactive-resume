@@ -3,17 +3,18 @@
 .player {
   position: absolute;
   z-index: 1000;
-  top: 220px;
+  top: 263px;
   left: 615px;
 
   @at-root {
     .player--batmobil {
-      left: 600px;
+      top: 275px;
+      left: 700px;
       @include sprite($-player-batmobil);
     }
 
     .player--atruck {
-      left: 630px;
+      left: 730px;
       @include sprite($-player-atruck);
     }
   }

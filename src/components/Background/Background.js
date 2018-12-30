@@ -34,13 +34,15 @@ export default React.createClass({
         // Desktop interface
         if (window.screen.width >= Constants.BACKGROUND_MIN_ARROW_DISPLAY_RES &&
           !('ontouchstart' in window || window.navigator.msMaxTouchPoints)) {
+
           this.setState({arrowInterface: false});
+
           window.addEventListener('scroll', (event) => {
             if (this.state.initialDisplay) {
               removeInfo.call(this);
             }
 
-            backgroundScroll(this.backgroundElm);
+            backgroundScroll(this.backgroundElm)
           });
         }
 

@@ -5,6 +5,7 @@
   position: relative;
   width: 5133px;
   height: 2639px;
+  transform: translate3d(0, 0, 0);
   @include sprite($-background-background);
 
   @at-root {
