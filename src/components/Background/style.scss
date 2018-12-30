@@ -2,56 +2,58 @@
 @import 'src/assets/styles/variables';
 
 .background {
-  position: relative;
-  width: 5133px;
-  height: 2639px;
-  transform: translate3d(0, 0, 0);
-  @include sprite($-background-background);
-
   @at-root {
-    .background--welcome {
+    .background__wrapper {
+      position: relative;
+      width: 5133px;
+      height: 2639px;
+      transform: translate3d(0, 0, 0);
+      @include sprite($-background-background);
+    }
+
+    .background__wrapper--welcome {
       top: 0;
       left: 0;
     }
 
-    .background--welcome {
+    .background__wrapper--welcome {
       top: -270.317px;
       left: -540.208px;
     }
 
-    .background--newsstand {
+    .background__wrapper--newsstand {
       top: -556.134px;
       left: -1111.39px;
     }
 
-    .background--xp {
+    .background__wrapper--xp {
       top: -753.292px;
       left: -1505.4px;
     }
 
-    .background--webdev {
+    .background__wrapper--webdev {
       top: -1016.17px;
       left: -2030.74px;
     }
 
-    .background--arcade {
+    .background__wrapper--arcade {
       top: -1218.29px;
       left: -2434.65px;
     }
 
-    .background--mobile {
+    .background__wrapper--mobile {
       top: -1481.16px;
       left: -2960px;
     }
 
-    .background--lab {
+    .background__wrapper--lab {
       top: -1678.32px;
       left: -3354px;
     }
 
-    .background--contact {
-      top: -1904px;
-      left: -3805px;
+    .background__wrapper--contact {
+      top: -1852px;
+      left: -3705px;
     }
 
     .background__arrow {
@@ -62,10 +64,6 @@
       height: 0;
       z-index: 10000;
       opacity: 0.8;
-
-      &:hover {
-        border-left-color: #FFF;
-      }
     }
 
     .background__arrow--left {
@@ -73,6 +71,10 @@
       border-top: 35px solid transparent;
       border-bottom: 35px solid transparent;
       border-right: 45px solid #000;
+
+      &:active {
+        border-right-color: #FFF;
+      }
     }
 
     .background__arrow--right {
@@ -80,12 +82,17 @@
       border-top: 35px solid transparent;
       border-bottom: 35px solid transparent;
       border-left: 45px solid #000;
+
+      &:active {
+        border-left-color: #FFF;
+      }
     }
 
     .background__scroll-info {
       position: fixed;
       bottom: 15%;
-      font-size: 25px;
+      font-size: 19px;
+      opacity: .8;
       text-transform: uppercase;
       right: 50%;
       transform: translateX(50%);

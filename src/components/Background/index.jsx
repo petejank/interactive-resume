@@ -14,7 +14,7 @@ export default class Background extends PureComponent {
   state = {
     arrowInterface: true,
     initialDisplay: true,
-    backgroundClass: ''
+    backgroundWrapperClass: ''
   }
 
   componentWillMount() {
@@ -41,19 +41,21 @@ export default class Background extends PureComponent {
 
   render() {
     return (
-      <div className={'background ' + this.state.backgroundClass}
-        ref={(backgroundElm) => {this.backgroundElm = backgroundElm}}>
+      <div className='background'>
+        <div className={'background__wrapper' + this.state.backgroundWrapperClass}
+          ref={(backgroundElm) => {this.backgroundElm = backgroundElm}}>
+          {this.props.children}
+        </div>
         {this._bottomScreenInterface()}
-        {this.props.children}
       </div>
     )
   }
 
   move(direction) {
-    const directionFunction = `move${direction}`
+    const subclass = backgroundScrollTo[`move${direction}`]()
 
     this.setState({
-      backgroundClass: `${constants.BACKGROUND_PREFIX}${constants.BACKGROUND_SUBCLASSES[backgroundScrollTo[directionFunction]()]}`
+      backgroundWrapperClass: ` ${constants.BACKGROUND_WRAPPER_PREFIX}${constants.BACKGROUND_WRAPPER_SUBCLASSES[subclass]}`
     })
 
     if (this.state.initialDisplay) {
