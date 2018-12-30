@@ -1,5 +1,8 @@
 'use strict'
 
+import '@babel/polyfill'
+import 'whatwg-fetch'
+
 import 'assets/styles/base.scss'
 
 import React from 'react'

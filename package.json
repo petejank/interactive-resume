@@ -64,6 +64,7 @@
     "webpack-spritesmith": "^0.4.1"
   },
   "dependencies": {
+    "@babel/polyfill": "^7.2.5",
     "bootstrap-sass": "^3.3.7",
     "classnames": "^2.2.5",
     "normalize.css": "^4.2.0",
@@ -71,7 +72,8 @@
     "react-bootstrap": "^0.32.4",
     "react-dom": "^15.3.1",
     "react-redux": "^4.4.5",
-    "redux": "^3.6.0"
+    "redux": "^3.6.0",
+    "whatwg-fetch": "^3.0.0"
   },
   "author": "",
   "license": "MIT for code, CC BY 3.0 for .png files"
