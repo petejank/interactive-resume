@@ -4,6 +4,7 @@ const webpack = require('webpack')
 
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const spritePlugins = require('./sprite.plugins')
@@ -37,6 +38,7 @@ module.exports = {
       })
     ]
   },
+  plugins: getPlugins(),
   module: {
     rules: [
       {
@@ -134,8 +136,11 @@ module.exports = {
         }
       }
     ]
-  },
-  plugins: [
+  }
+}
+
+function getPlugins() {
+  const plugins = [
     new MiniCssExtractPlugin({
       filename: isProduction ? '[name].[contenthash].css' : '[name].css'
     }),
@@ -156,4 +161,14 @@ module.exports = {
     // Sprites building
     ...spritePlugins()
   ]
+
+  if (isProduction) {
+    plugins.push(
+      new OptimizeCssAssetsPlugin({
+        cssProcessorOptions: { discardComments: { removeAll: true } }
+      })
+    )
+  }
+
+  return plugins
 }
