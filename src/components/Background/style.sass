@@ -4,12 +4,11 @@
 .background
   @at-root
     .background__wrapper
+      +sprite($-background-background)
       position: relative
       width: 5133px
       height: 2639px
       transform: translate3d(0, 0, 0)
-
-      +sprite($-background-background)
 
     .background__wrapper--welcome
       top: 0
@@ -54,7 +53,7 @@
       width: 0
       height: 0
       z-index: 10000
-      opacity: 0.8
+      opacity: .8
 
     .background__arrow--left
       left: 5%
@@ -63,7 +62,7 @@
       border-right: 45px solid #000
 
       &:active
-        border-right-color: #FFF
+        border-right-color: #fff
 
     .background__arrow--right
       right: 5%
@@ -72,7 +71,7 @@
       border-left: 45px solid #000
 
       &:active
-        border-left-color: #FFF
+        border-left-color: #fff
 
     .background__scroll-info
       position: fixed

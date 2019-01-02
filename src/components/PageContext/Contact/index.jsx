@@ -42,8 +42,8 @@ export default class PageContextContact extends PureComponent {
               </div> : null
           }
           <div className='page-context-contact__twitter'>
-            You can also contact me on twitter
-            <a href='https://twitter.com/likeadev' className='twitter-follow-button' data-show-count='false'
+            You can also contact me on twitter:
+            <a href='https://twitter.com/likeadev' className='twitter-follow-button not-rendered' data-show-count='false'
               data-size='large'>
               Follow @likeadev
             </a>

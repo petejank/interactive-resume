@@ -1,11 +1,14 @@
 @import 'src/assets/styles/colors'
 
 .page-context-games
-  color: #dedede
+  $game-header-color: #dedede
+  $game-subheader-color: #ff0
+
+  color: $game-header-color
 
   @at-root
     .page-context-games__header
-      color: #dedede
+      color: $game-header-color
       text-align: center
       border: 2px solid #2121de
       border-radius: 5px
@@ -20,7 +23,7 @@
       font-size: 16px
       border: 0
       font-weight: normal
-      color: #ffff00
+      color: $game-subheader-color
 
     .page-context-games__text-box
       padding: 10px
@@ -29,7 +32,7 @@
       background: #09093e
 
     .page-context-games__emboss
-      color: #ffff00
+      color: $game-subheader-color
 
     .page-context-games__text-box--small-margin-top
       margin-top: 15px

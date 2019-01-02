@@ -10,22 +10,20 @@
     .car-picker-pick__box
       display: inline-block
       margin: 0 auto
-      border: 1px solid #FFF
-      box-shadow: 3px 3px 0px 1px #2d2f31
+      border: 1px solid #fff
+      box-shadow: 3px 3px 0 1px #2d2f31
 
     .car-picker-pick__graphic
       +sprite($-car-picker-car-bg)
 
     .car-picker-pick__atruck
       +sprite($-player-atruck)
-
       position: relative
       top: 20px
       left: 20px
 
     .car-picker-pick__batmobil
       +sprite($-player-batmobil)
-
       position: relative
       top: 30px
       left: 5px
@@ -44,19 +42,19 @@
       padding: 7px 15px
       font-size: 21px
       border: 1px solid $red-light
-      box-shadow: 3px 3px 0px 1px $gray-medium-1
+      box-shadow: 3px 3px 0 1px $gray-medium-1
       background: $red-medium
 
       @media (max-width: $sm-res)
         margin-top: 10px
 
       &:hover
-        border-color: #FFF
+        border-color: #fff
         background: $red-light
 
       &:focus
         outline: 0
-        border: 1px solid #FFF
+        border: 1px solid #fff
 
       &:active
         box-shadow: none

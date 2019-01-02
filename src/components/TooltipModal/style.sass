@@ -9,20 +9,20 @@
   padding: 4px 10px
   text-align: left
   background: $gray-dark
-  border: 1px solid #FFF
+  border: 1px solid #fff
   transform: translateX(50%)
   z-index: 6000
 
   @media (min-width: $sm-res)
     border-color: $gray-light
     animation: tooltip-move 1.5s infinite ease-in-out
-    opacity: 0.85
-    transition: all 0.3s ease-in-out
-    box-shadow: inset 0px 0px 0px 1px #FFF, 2px 2px 0px 0px $gray-medium-2
+    opacity: .85
+    transition: box-shadow .3s ease-in-out, opacity .3s ease-in-out
+    box-shadow: inset 0 0 0 1px #fff, 2px 2px 0 0 $gray-medium-2
 
     &:hover
       opacity: 1
-      box-shadow: inset 0px 0px 0px 1px $yellow, 2px 2px 0px 0px $gray-medium-2
+      box-shadow: inset 0 0 0 1px $yellow, 2px 2px 0 0 $gray-medium-2
 
   @at-root
     .tooltip__arrow

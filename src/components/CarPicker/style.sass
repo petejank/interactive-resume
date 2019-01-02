@@ -3,22 +3,24 @@
 
 .car-picker
   position: absolute
-  transition: all 0.9s ease-out
+  transition: transform .9s ease-out
   top: 0
   left: 0
+  transform: translate3d(0, 0, 0)
   z-index: 7000
 
-.car-picker__background
-  position: relative
-  top: 0
-  left: 0
-  width: 100vw
-  height: 100vh
-  background: $gray-dark
-  overflow-y: auto
+  @at-root
+    .car-picker__background
+      position: relative
+      top: 0
+      left: 0
+      width: 100vw
+      height: 100vh
+      background: $gray-dark
+      overflow-y: auto
 
-  @media (max-width: $sm-res)
-    padding: 10px
+      @media (max-width: $sm-res)
+        padding: 10px
 
-.car-picker--hide
-  margin-top: -100vh
+    .car-picker--hide
+      transform: translate3d(0, -100vh, 0)

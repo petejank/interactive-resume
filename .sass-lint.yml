@@ -1,0 +1,87 @@
+options:
+  merge-default-rules: false
+
+files:
+  include: 'src/**/*.sass'
+
+rules:
+  attribute-quotes: 2
+  bem-depth: 2
+  border-zero: 2
+  brace-style: 0 # Not applicable to indented syntax
+  clean-import-paths: 0
+  empty-args: 0 # Not applicable to indented syntax
+  empty-line-between-blocks: 0 # It's buggy
+  extends-before-declarations: 0 # Not applicable to indented syntax
+  extends-before-mixins: 0 # Not applicable to indented syntax
+  final-newline: 2
+  force-attribute-nesting: 0
+  force-element-nesting: 0
+  force-pseudo-nesting: 0
+  function-name-format:
+    - 2
+    -
+      allow-leading-underscore: false
+      convention: hyphenatedlowercase
+  hex-length: 2
+  hex-notation: 2
+  id-name-format: 0 # ids are disallowed
+  indentation: 0
+  leading-zero: 2
+  mixin-name-format:
+    - 2
+    -
+      allow-leading-underscore: false
+      convention: hyphenatedlowercase
+  mixins-before-declarations: 2
+  nesting-depth: 2
+  no-attribute-selectors: 2
+  no-color-keywords: 0
+  no-color-literals: 0
+  no-combinators: 0
+  no-css-comments: 2
+  no-debug: 2
+  no-disallowed-properties:
+    - 2
+    -
+      properties:
+        - float
+  no-duplicate-properties: 2
+  no-empty-rulesets: 2
+  no-extends: 2
+  no-ids: 2
+  no-important: 0
+  no-invalid-hex: 2
+  no-mergeable-selectors: 2
+  no-misspelled-properties: 2
+  no-qualifying-elements: 2
+  no-trailing-whitespace: 2
+  no-trailing-zero: 2
+  no-transition-all: 2
+  no-universal-selectors: 0
+  no-url-protocols: 2
+  no-vendor-prefixes: 0
+  no-warn: 2
+  one-declaration-per-line: 0 # Not applicable to indented syntax
+  placeholder-in-extend: 0 # Extends are disallowed
+  placeholder-name-format: 0 # Extends are disallowed
+  property-sort-order: 0
+  pseudo-element: 0
+  quotes: 2
+  shorthand-values: 2
+  space-after-bang: 0
+  space-after-colon: 0 # Not applicable to indented syntax
+  space-after-comma: 2
+  space-around-operator: 2
+  space-before-bang: 2
+  space-before-brace: 0 # Not applicable to indented syntax
+  space-before-colon: 0
+  space-between-parens: 0
+  trailing-semicolon: 0 # Not applicable to indented syntax
+  url-quotes: 2
+  variable-name-format:
+    - 2
+    -
+      allow-leading-underscore: false
+      convention: hyphenatedlowercase
+  zero-unit: 2

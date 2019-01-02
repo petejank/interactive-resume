@@ -11,20 +11,20 @@
     .page-context-accordion__header
       padding: 4px 10px
       background: $gray-dark
-      border: 1px solid #FFF
+      border: 1px solid #fff
       margin-bottom: 10px
-      color: #FFF
+      color: #fff
 
       @media (max-width: $l-res)
         text-align: center
 
       @media (min-width: $sm-res)
         border-color: $gray-light
-        box-shadow: inset 0px 0px 0px 1px #FFF, 2px 2px 0px 0px $gray-medium-2
-        transition: all 0.3s ease-in-out
+        box-shadow: inset 0 0 0 1px #fff, 2px 2px 0 0 $gray-medium-2
+        transition: box-shadow .3s ease-in-out
 
         &:hover
-          box-shadow: inset 0px 0px 0px 1px $yellow-dark, 2px 2px 0px 0px $gray-medium-2
+          box-shadow: inset 0 0 0 1px $yellow-dark, 2px 2px 0 0 $gray-medium-2
 
     .page-context-accordion__header-body
       padding: 10px 0
@@ -50,7 +50,7 @@
         display: block
 
     .page-context-accordion__text
-      color: #FFF
+      color: #fff
       border-left: 1px solid $yellow
       margin-left: 7px
       padding-left: 7px
@@ -59,9 +59,8 @@
         border-left: 0
 
     .page-context-accordion__orange-link
-      display: block
-      text-decoration: underline
       display: inline-block
+      text-decoration: underline
       vertical-align: middle
       border-left: 1px solid $yellow
       margin-left: 127px

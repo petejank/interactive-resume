@@ -8,6 +8,7 @@
     "build": "rm -rf dist && webpack",
     "build:prod": "rm -rf dist && NODE_ENV=production webpack",
     "lint": "eslint src --ext .js,.jsx --ignore-pattern test.*",
+    "lint-sass": "sass-lint -qv",
     "test": "karma start karma.conf.js"
   },
   "devDependencies": {
@@ -56,6 +57,7 @@
     "node-sass": "^4.11.0",
     "optimize-css-assets-webpack-plugin": "^5.0.1",
     "postcss-loader": "^3.0.0",
+    "sass-lint": "^1.12.1",
     "sass-loader": "^7.1.0",
     "sinon": "^1.17.5",
     "sinon-chai": "^2.8.0",
