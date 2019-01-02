@@ -1,5 +1,3 @@
-'use strict'
-
 export default {
   getScrollY() {
     return window.pageYOffset || document.documentElement.scrollTop

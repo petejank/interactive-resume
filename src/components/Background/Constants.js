@@ -1,5 +1,3 @@
-'use strict'
-
 export const SCROLL_MAX_LEFT = -3705
 export const SCROLL_MAX_TOP = -1852
 export const SCROLL_DURATION = 1500

@@ -1,5 +1,3 @@
-'use strict'
-
 import scroll from 'other/scroll'
 import * as constants from '../../constants'
 

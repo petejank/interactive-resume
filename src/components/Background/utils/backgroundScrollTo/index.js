@@ -1,5 +1,3 @@
-'use strict'
-
 import * as constants from '../../constants'
 
 let currentIndex = 0
