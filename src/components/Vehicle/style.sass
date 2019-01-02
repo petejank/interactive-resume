@@ -1,0 +1,18 @@
+@import '~Vehicle.sass'
+
+.vehicle
+  position: absolute
+  z-index: 1250
+
+  @at-root
+    .vehicle--police-x
+      top: 27px
+      left: 56px
+
+      +sprite($-vehicle-police-x)
+
+    .vehicle--police-y
+      top: 83px
+      left: -110px
+
+      +sprite($-vehicle-police-y)

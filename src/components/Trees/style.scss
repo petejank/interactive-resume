@@ -1,9 +1,0 @@
-@import '~Trees.scss';
-
-.trees {
-  position: absolute;
-  top: 404px;
-  left: 746px;
-  @include sprite($-trees-trees);
-  z-index: 500;
-}

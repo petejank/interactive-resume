@@ -1,0 +1,20 @@
+@import 'src/assets/styles/colors'
+@import 'src/assets/styles/variables'
+
+.modal-dialog-newspaper
+  .modal-content
+    background-color: #efeedc
+    border-radius: 0
+    border: 0
+    border-right: 2px solid $olive-dark
+    border-bottom: 6px solid #606058
+    box-shadow: none
+
+    @media (min-width: $sm-res)
+      box-shadow: 2px 0px 0 0px #a7a49b, 4px 0px 0 0px $olive-dark, 6px 0px 0 0px #a7a49b, 8px 0px 0 0px $olive-dark
+
+  .modal-header
+    border: 0
+
+    .close
+      color: $olive !important

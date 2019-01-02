@@ -14,7 +14,7 @@ module.exports = () => componentsDirs.map((directory) => {
     },
     target: {
       image: path.resolve(`${targetFileName}.png`),
-      css: `${targetFileName}.scss`
+      css: `${targetFileName}.sass`
     },
     apiOptions: {
       generateSpriteName: (fileName) => {

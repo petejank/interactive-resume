@@ -1,9 +1,0 @@
-@import '~Person.scss';
-
-.jumping-shadow {
-  position: absolute;
-  top: 40px;
-  right: 50%;
-  transform: translateX(50%);
-  @include sprite($-person-jumping-shadow);
-}

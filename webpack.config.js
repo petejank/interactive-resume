@@ -48,7 +48,7 @@ module.exports = {
       },
       {
         test: /index\.jsx?$/,
-        loader: 'baggage-loader?style.scss'
+        loader: 'baggage-loader?style.sass'
       },
       {
         test: /\.css$/,
@@ -71,7 +71,7 @@ module.exports = {
         ]
       },
       {
-        test: /\.scss$/,
+        test: /\.sass$/,
         use: [
           MiniCssExtractPlugin.loader,
           {
