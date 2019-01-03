@@ -1,3 +1,4 @@
+@import 'src/assets/styles/headers'
 @import 'src/assets/styles/variables'
 @import 'src/assets/styles/colors'
 
@@ -7,17 +8,13 @@
 
   @at-root
     .page-context-contact__header
-      text-align: center
-      font-size: 30px
-      margin: 0
-      padding: 10px 0
-      border-bottom: 2px solid #fff
+      +header-h1
+      padding-bottom: 5px
 
     .page-context-contact__subheader
-      display: block
-      margin-top: 5px
-      font-size: 16px
-      font-weight: normal
+      +header-h2
+      border-bottom: 2px solid #fff
+      padding-bottom: 10px
 
     .page-context-contact__twitter
       line-height: 30px
@@ -47,12 +44,11 @@
         outline: 0
         line-height: 26px
 
-.page-context-contact-form
-  margin: 15px 0
-  position: relative
+    .page-context-contact__form
+      margin: 15px 0
+      position: relative
 
-  @at-root
-    .page-context-contact-form__overlay
+    .page-context-contact__form-overlay
       height: 102%
       width: 100%
       position: absolute
@@ -63,27 +59,27 @@
       background: #000
       opacity: .8
 
-    .page-context-contact-form__status
+    .page-context-contact__form-status
       padding-left: 2px
       margin: 10px 0
       padding: 10px
 
-    .page-context-contact-form__status--success
+    .page-context-contact__form-status--success
       border: 1px solid #a2ffa7
       background: #31a237
       color: #fff
 
-    .page-context-contact-form__status--error
+    .page-context-contact__form-status--error
       border: 1px solid #ffa2a2
       background: #d22020
       color: #fff
 
-    .page-context-contact-form__label
+    .page-context-contact__form-label
       display: block
       margin: 10px 0
       padding-left: 2px
 
-    .page-context-contact-form__input
+    .page-context-contact__form-input
       display: block
       width: 100%
       background-color: #fff
@@ -97,7 +93,7 @@
         outline: 0
         box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(0, 0, 0, .6)
 
-    .page-context-contact-form__submit
+    .page-context-contact__form-submit
       position: relative
       display: block
       width: 183px
@@ -126,5 +122,5 @@
         left: 3px
         top: 3px
 
-    .page-context-contact-form__input--textarea
+    .page-context-contact__form-input--textarea
       height: 200px

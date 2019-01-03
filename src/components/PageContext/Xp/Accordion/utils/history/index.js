@@ -1,5 +1,12 @@
 export default [
   {
+    timespan: '11.2016 - present',
+    company: 'Toptal',
+    jobTitle: 'Front-end Developer',
+    description: `Currently working on front-end for core Toptal platform. I also worked as a lead front-end developer
+      on Collabshot and as a maintainer of TopTracker`
+  },
+  {
     timespan: '06.2014 - 10.2016',
     company: '-',
     jobTitle: 'Private Projects Development',

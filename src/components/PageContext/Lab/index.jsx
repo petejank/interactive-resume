@@ -6,17 +6,21 @@ import entries from './utils/entries'
 import oldEntries from './utils/oldEntries'
 
 const PageContextLabel = () => (
-  <TooltipModal tooltipText='Quickly, drink this and check the projects!' modalClass='modal-dialog-lab'>
+  <TooltipModal tooltipText='Private projects' modalClass='modal-dialog-lab'>
     <section>
       <div className='page-context-lab'>
-        <h2 className='page-context-lab__header'>
-          Personal Laboratory
-          <span className='page-context-lab__subheader'>Stuff tends to explode here</span>
-        </h2>
+        <header>
+          <h2 className='page-context-lab__header'>
+            Personal laboratory
+          </h2>
+          <p className='page-context-lab__subheader'>
+            Things tend to explode here
+          </p>
+        </header>
         <div className='page-context-lab__text-box'>
           <p>
-            And this is my favorite place, where dreams come true. I put all the passion I can into my work. Best
-            proof of that will be my personal projects, crafted with love. Below is the list of my latest creations.
+            I put all the passion I can into my work. Best proof of that will be my personal projects,
+            crafted with love. Below is the list of my latest creations.
           </p>
           <p>
             <span className='emboss-dark-yellow'>Click on a position</span> to check out it's details.

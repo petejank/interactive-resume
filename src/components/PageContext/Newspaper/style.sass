@@ -1,4 +1,5 @@
 @import 'src/assets/styles/colors'
+@import 'src/assets/styles/headers'
 
 $light-paper-color: #b1ad97
 
@@ -9,19 +10,18 @@ $light-paper-color: #b1ad97
 
   @at-root
     .page-context-newspaper__header
+      +header-h1
       color: $olive
-      text-align: center
-      font-size: 30px
-      margin: 0
-      padding: 10px 0 0
       border-bottom: 2px solid $light-paper-color
 
     .page-context-newspaper__subheader
-      border-top: 2px solid $light-paper-color
-      display: block
-      margin-top: 10px
+      +header-h2
+      color: $olive
+      border-bottom: 2px solid $light-paper-color
       padding: 5px 0
-      font-size: 16px
+
+    .page-context-newspaper__section-header
+      +header-h3
 
     .page-context-newspaper__text
       padding: 10px

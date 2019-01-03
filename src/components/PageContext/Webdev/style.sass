@@ -1,3 +1,4 @@
+@import 'src/assets/styles/headers'
 @import 'src/assets/styles/colors'
 
 .page-context-webdev
@@ -7,18 +8,13 @@
 
   @at-root
     .page-context-webdev__header
-      text-align: center
-      font-size: 30px
-      margin: 0
-      padding: 10px 0
-      border-bottom: 2px solid $gray-light-1
+      +header-h1
+      padding-bottom: 5px
 
     .page-context-webdev__subheader
-      display: block
-      margin-top: 5px
-      font-size: 16px
-      border: 0
-      font-weight: normal
+      +header-h2
+      padding-bottom: 10px
+      border-bottom: 2px solid $gray-light-1
       color: $yellow-dark
 
 .page-context-webdev__footer

@@ -3,9 +3,10 @@
 
 .tooltip
   position: absolute
+  display: flex
+  align-items: center
   top: 135%
   right: 0
-  width: 150px
   padding: 4px 10px
   text-align: left
   background: $gray-dark
@@ -39,15 +40,8 @@
     .tooltip__exclamation
       color: $yellow
       font-family: $standard-browser-fonts
-      vertical-align: middle
       font-weight: bold
       font-size: 20px
-      display: inline-block
-
-    .tooltip__text-box
-      display: inline-block
-      width: 115px
-      vertical-align: middle
 
     .tooltip__text
       font-family: 'Terminal'
@@ -56,8 +50,8 @@
       border-left: 1px solid $yellow
       margin-left: 7px
       padding-left: 7px
-      width: 100%
       overflow: hidden
+      white-space: nowrap
 
     .tooltip--building
       top: 100%

@@ -3,35 +3,46 @@ import React from 'react'
 import TooltipModal from 'components/TooltipModal'
 
 const PageContextWebdev = () => (
-  <TooltipModal tooltipText='Check those webdev skills!' modalClass='modal-dialog-webdev'>
+  <TooltipModal tooltipText='Web development' modalClass='modal-dialog-webdev'>
     <section>
       <div className='page-context-webdev'>
-        <h2 className='page-context-webdev__header'>
-          The Legend Of The WebDev!
-          <span className='page-context-webdev__subheader'> I wouldn't say "legend", but duuhhhh..</span>
-        </h2>
+        <header>
+          <h2 className='page-context-webdev__header'>
+            Web development skills
+          </h2>
+          <p className='page-context-webdev__subheader'>Both in front-end and back-end</p>
+        </header>
         <p>
-          Below are listed all languages/technologies and other stuff I use in web development.
-          <span className='emboss-dark-yellow'> Most of my attention is of course focused on front side of the web:</span>
+          Below are listed all languages/technologies I currently use.
+          <span className='emboss-dark-yellow'> Most of my attention is focused on front side of the web:</span>
         </p>
         <ul>
-          <li>HTML/CSS (SASS mostly)</li>
+          <li>HTML/CSS (SASS/Stylus mostly)</li>
           <li>Vanilla JavaScript</li>
-          <li>Angular 1.x</li>
           <li>ReactJS with Redux</li>
+          <li>Jest</li>
+          <li>Node.js</li>
+          <li>Postgres</li>
+          <li>Webpack</li>
+          <li>Python</li>
+          <li>Tiny amounts of Ruby/Rails</li>
+          <li>Git</li>
+        </ul>
+        <p>
+          Here you'll find things that
+          <span className='emboss-dark-yellow'> I have used in the past and still know the drill. </span>
+        </p>
+        <ul>
+          <li>AngularJS</li>
           <li>Backbone.js with Marionette</li>
           <li>Phaser (JavaScript game framework)</li>
           <li>Karma with Jasmine or Mocha with Chai and Sinon.JS</li>
-          <li>Node.js</li>
-          <li>MongoDB and MySQL</li>
-          <li>Webpack</li>
+          <li>MySQL</li>
           <li>Gulp</li>
           <li>Grunt</li>
         </ul>
         <p>
-          And down here there's something that
-          <span className='emboss-dark-yellow'> I have used in the past and still know the drill. </span>
-          But I don't think I would want to use it in the future:
+          And down here there are things that I used to know but I don't think I would want to use them in the future:
         </p>
         <ul>
           <li>PHP</li>

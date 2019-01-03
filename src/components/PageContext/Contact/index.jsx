@@ -16,64 +16,74 @@ export default class PageContextContact extends PureComponent {
   }
 
   render() {
+    const {name, senderEmail, message, status} = this.state
+
     return (
-      <TooltipModal tooltipText='Want to contact the author?' modalClass='modal-dialog-contact'
+      <TooltipModal tooltipText='Contact the author' modalClass='modal-dialog-contact'
         additionalClass='tooltip--building' enterCallback={this.modalEnter}>
         <section>
-          {/* Page contact form header */}
-          <div className='page-context-contact'>
-            <h2 className='page-context-contact__header'>
-              Contact time!
-              <span className='page-context-contact__subheader'>Here you can send me something nice</span>
-            </h2>
-          </div>
-          {/* Success status notifier */}
-          {
-            this.state.status === 'sent'
-              ? <div className='page-context-contact-form__status page-context-contact-form__status--success'>
-                Message successfully sent. We'll be in touch!
-              </div> : null
-          }
-          {/* Error status notifier */}
-          {
-            this.state.status === 'error'
-              ? <div className='page-context-contact-form__status page-context-contact-form__status--error'>
-                An error occurred while trying to send the message. Please try again
-              </div> : null
-          }
+          <header>
+            <div className='page-context-contact'>
+              <h2 className='page-context-contact__header'>
+                Contact time!
+              </h2>
+              <p className='page-context-contact__subheader'>Here you can send me something nice</p>
+            </div>
+          </header>
+          {status === 'sent' && (
+            <div className='page-context-contact__form-status page-context-contact__form-status--success'>
+              Message successfully sent. We'll be in touch!
+            </div>
+          )}
+          {status === 'error' && (
+            <div className='page-context-contact__form-status page-context-contact__form-status--error'>
+              An error occurred while trying to send the message. Please try again
+            </div>
+          )}
           <div className='page-context-contact__twitter'>
-            You can also contact me on twitter:
+            You can also contact me on Twitter:
             <a href='https://twitter.com/likeadev' className='twitter-follow-button not-rendered' data-show-count='false'
               data-size='large'>
               Follow @likeadev
             </a>
           </div>
-          {/* Contact form */}
-          <form className='page-context-contact-form' onSubmit={this.handleSubmit}>
-            <label htmlFor='contact-name' className='page-context-contact-form__label'>
+          <form className='page-context-contact__form' onSubmit={this.handleSubmit}>
+            <label htmlFor='contact-name' className='page-context-contact__form-label'>
               Name:
             </label>
-            <input id='contact-name' className='page-context-contact-form__input' name='name'
-              value={this.state.name} onChange={this.inputChange} />
-            <label htmlFor='contact-email' className='page-context-contact-form__label'>
+            <input
+              id='contact-name'
+              className='page-context-contact__form-input'
+              name='name'
+              value={name}
+              onChange={this.inputChange}
+            />
+            <label htmlFor='contact-email' className='page-context-contact__form-label'>
               E-mail:
             </label>
-            <input id='contact-email' className='page-context-contact-form__input' name='senderEmail'
-              value={this.state.senderEmail} onChange={this.inputChange} />
-            <label htmlFor='contact-message' className='page-context-contact-form__label'>
+            <input
+              id='contact-email'
+              className='page-context-contact__form-input'
+              name='senderEmail'
+              value={senderEmail}
+              onChange={this.inputChange}
+            />
+            <label htmlFor='contact-message' className='page-context-contact__form-label'>
               Message:
             </label>
-            <textarea id='contact-message'
-              className='page-context-contact-form__input page-context-contact-form__input--textarea'
-              name='message' value={this.state.message} onChange={this.inputChange} />
-            <button className='page-context-contact-form__submit' type='submit'>Send</button>
-            {/* Sending notifier */}
-            {
-              this.state.status === 'sending'
-                ? <div className='page-context-contact-form__overlay'>
-                  Sending...
-                </div> : null
-            }
+            <textarea
+              id='contact-message'
+              className='page-context-contact__form-input page-context-contact__form-input--textarea'
+              name='message'
+              value={message}
+              onChange={this.inputChange}
+            />
+            <button className='page-context-contact__form-submit' type='submit'>Send</button>
+            {status === 'sending' && (
+              <div className='page-context-contact__form-overlay'>
+                Sending...
+              </div>
+            )}
           </form>
         </section>
       </TooltipModal>

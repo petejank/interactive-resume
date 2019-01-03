@@ -1,3 +1,4 @@
+@import 'src/assets/styles/headers'
 @import 'src/assets/styles/colors'
 
 .page-context-games
@@ -7,9 +8,7 @@
   color: $game-header-color
 
   @at-root
-    .page-context-games__header
-      color: $game-header-color
-      text-align: center
+    .page-context-games__header-box
       border: 2px solid #2121de
       border-radius: 5px
       padding: 10px
@@ -17,13 +16,17 @@
       margin-bottom: 15px
       background: #09093e
 
+    .page-context-games__header
+      +header-h1
+      padding: 0 0 5px
+      color: $game-header-color
+
     .page-context-games__subheader
-      display: block
-      margin-top: 5px
-      font-size: 16px
-      border: 0
-      font-weight: normal
+      +header-h2
       color: $game-subheader-color
+
+    .page-context-games__section-header
+      +header-h3
 
     .page-context-games__text-box
       padding: 10px
