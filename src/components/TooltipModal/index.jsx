@@ -24,13 +24,13 @@ export default class TooltipModal extends PureComponent {
 
     return (
       <div>
-        <a className={tooltipClass} onClick={this.showModal}>
+        <button className={tooltipClass} onClick={this.showModal}>
           <div className='tooltip__exclamation'>!</div>
           <div className='tooltip__text-box'>
             <div className='tooltip__text'>{tooltipText}</div>
           </div>
           <div className='tooltip__arrow' />
-        </a>
+        </button>
         {this.state.showModal && (
           <Modal onExited={this.removeModal} onEnter={enterCallback} modalClass={modalClass}>
             {children}

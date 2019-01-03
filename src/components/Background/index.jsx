@@ -67,12 +67,12 @@ export default class Background extends PureComponent {
     if (this.state.arrowInterface) {
       return (
         <div>
-          <a className='background__arrow background__arrow--left' onClick={() => this.move('Backward')} />
+          <button className='background__arrow background__arrow--left' onClick={() => this.move('Backward')} />
           <div className='background__scroll-info background__scroll-info--mobile'
             ref={(backgroundInterfaceInfo) => {this.backgroundInterfaceInfo = backgroundInterfaceInfo}}>
               Tap these arrows to move
           </div>
-          <a className='background__arrow background__arrow--right' onClick={() => this.move('Forward')} />
+          <button className='background__arrow background__arrow--right' onClick={() => this.move('Forward')} />
         </div>
       )
     }

@@ -17,7 +17,7 @@ export default class PageContextLabAccordion extends PureComponent {
             </Panel.Title>
           </Panel.Heading>
           <Panel.Body collapsible>
-            <a className='page-context-accordion__orange-link' href={'http://' + entry.link}>{entry.link}</a>
+            <a href={'http://' + entry.link} className='page-context-accordion__orange-link'>{entry.link}</a>
             <div className='page-context-accordion__margined-description'>
               {entry.description}
             </div>

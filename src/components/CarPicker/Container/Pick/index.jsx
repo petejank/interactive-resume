@@ -23,7 +23,6 @@ export default class CarPickerPick extends PureComponent {
 
     return (
       <div className='car-picker-pick'>
-        {/* Actuall car selection box */}
         <div className='car-picker-pick__box'>
           <div className='car-picker-pick__graphic'>
             <div className={carClass} />
@@ -32,9 +31,9 @@ export default class CarPickerPick extends PureComponent {
             {pickTexts[pickerClass]}
           </div>
         </div>
-        <a tabIndex='0' className='car-picker-pick__button' onClick={this.handleButtonClick}>
+        <button className='car-picker-pick__button' onClick={this.handleButtonClick}>
           {buttonTexts[pickerClass]}
-        </a>
+        </button>
       </div>
     )
   }
