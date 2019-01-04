@@ -1,4 +1,5 @@
-import React, {PropTypes} from 'react'
+import React, {memo} from 'react'
+import PropTypes from 'prop-types'
 import classNames from 'classnames'
 
 const Person = ({personClass, children}) => {
@@ -16,4 +17,4 @@ Person.propTypes = {
   children: PropTypes.node
 }
 
-export default Person
+export default memo(Person)

@@ -1,4 +1,4 @@
-import React, {PureComponent} from 'react'
+import React, {PureComponent, Fragment} from 'react'
 
 import {PanelGroup, Panel} from 'react-bootstrap'
 import history from './utils/history'
@@ -29,7 +29,7 @@ export default class PageContextXpAccordion extends PureComponent {
 
   _accordionHeader(historyEntry) {
     return (
-      <div>
+      <Fragment>
         <div className='page-context-accordion__left-info'>
           {historyEntry.timespan}
         </div>
@@ -41,7 +41,7 @@ export default class PageContextXpAccordion extends PureComponent {
             {historyEntry.company}
           </div>
         </div>
-      </div>
+      </Fragment>
     )
   }
 }

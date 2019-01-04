@@ -1,4 +1,5 @@
-import React, {PropTypes, PureComponent} from 'react'
+import React, {PureComponent, Fragment} from 'react'
+import PropTypes from 'prop-types'
 
 import store from 'store'
 import backgroundScroll from './utils/backgroundScroll'
@@ -66,14 +67,14 @@ export default class Background extends PureComponent {
   _bottomScreenInterface() {
     if (this.state.arrowInterface) {
       return (
-        <div>
+        <Fragment>
           <button className='background__arrow background__arrow--left' onClick={() => this.move('Backward')} />
           <div className='background__scroll-info background__scroll-info--mobile'
             ref={(backgroundInterfaceInfo) => {this.backgroundInterfaceInfo = backgroundInterfaceInfo}}>
               Tap these arrows to move
           </div>
           <button className='background__arrow background__arrow--right' onClick={() => this.move('Forward')} />
-        </div>
+        </Fragment>
       )
     }
 

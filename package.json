@@ -73,9 +73,10 @@
     "bootstrap-sass": "^3.3.7",
     "classnames": "^2.2.5",
     "normalize.css": "^4.2.0",
-    "react": "^15.3.1",
+    "prop-types": "^15.6.2",
+    "react": "^16.7.0",
     "react-bootstrap": "^0.32.4",
-    "react-dom": "^15.3.1",
+    "react-dom": "^16.7.0",
     "react-redux": "^4.4.5",
     "redux": "^3.6.0",
     "whatwg-fetch": "^3.0.0"

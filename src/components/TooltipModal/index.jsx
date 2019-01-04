@@ -1,4 +1,5 @@
-import React, {PropTypes, PureComponent} from 'react'
+import React, {PureComponent, Fragment} from 'react'
+import PropTypes from 'prop-types'
 import classNames from 'classnames'
 
 import Modal from 'components/Modal'
@@ -23,7 +24,7 @@ export default class TooltipModal extends PureComponent {
     })
 
     return (
-      <div>
+      <Fragment>
         <button className={tooltipClass} onClick={this.showModal}>
           <div className='tooltip__exclamation'>!</div>
           <div className='tooltip__text-box'>
@@ -36,7 +37,7 @@ export default class TooltipModal extends PureComponent {
             {children}
           </Modal>
         )}
-      </div>
+      </Fragment>
     )
   }
 
