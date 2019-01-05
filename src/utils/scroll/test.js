@@ -21,8 +21,8 @@ describe('scroll', () => {
     };
 
     scroll = ScrollInject({
-      'other/window': windowMock,
-      'other/document': documentMock
+      'utils/window': windowMock,
+      'utils/document': documentMock
     }).default;
   });
 

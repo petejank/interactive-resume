@@ -15,6 +15,7 @@
       "afterOpening": "never",
       "closingSlash": "never"
     }],
+    "react/no-did-update-set-state": 0,
     "jsx-quotes": ["error", "prefer-single"],
     "no-console": 2,
     "no-trailing-spaces": 2,

@@ -26,7 +26,7 @@ describe('Background', () => {
       'store/store': storeMock,
       './BackgroundScroll': backgroundScroll,
       './BackgroundScrollTo': backgroundScrollTo,
-      'other/window': windowMock
+      'utils/window': windowMock
     }).default;
   });
 

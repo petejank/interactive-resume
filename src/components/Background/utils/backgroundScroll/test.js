@@ -15,7 +15,7 @@ describe('BackgroundScroll', () => {
     };
 
     const backgroundScroll = BackgroundScrollInject({
-      'other/scroll': scrollStub
+      'utils/scroll': scrollStub
     }).default;
 
     backgroundScroll(backgroundElm);

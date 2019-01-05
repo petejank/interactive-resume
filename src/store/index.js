@@ -1,4 +1,6 @@
-import {createStore, combineReducers} from 'redux'
-import playerReducer from './player/reducer'
+import {createContext} from 'react'
 
-export default createStore(combineReducers({playerState: playerReducer}))
+const MainContext = createContext()
+const {Provider} = MainContext
+
+export {MainContext, Provider}

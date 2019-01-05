@@ -1,4 +1,4 @@
-import scroll from 'other/scroll'
+import scroll from 'utils/scroll'
 import * as constants from '../../constants'
 
 export default (backgroundElm) => {

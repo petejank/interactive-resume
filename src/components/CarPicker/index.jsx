@@ -1,60 +1,37 @@
-import React, {PureComponent} from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
-import classNames from 'classnames'
-import {connect} from 'react-redux'
+import classnames from 'classnames'
 
-import CarPickerContainer from './Container'
-import store from 'store'
-import * as playerActions from 'store/player/actions'
-import * as constants from './constants'
+import CarPickerPick from './Pick'
 
-export class CarPicker extends PureComponent {
-  static propTypes = {
-    children: PropTypes.node.isRequired,
-    playerCar: PropTypes.string
-  }
+const CarPicker = ({pickCarHandler, hide}) => {
+  const carPickerClass = classnames('car-picker', {
+    'car-picker--hide': hide
+  })
 
-  state = {
-    rendered: true
-  }
-
-  render() {
-    const {playerCar, children} = this.props
-    const {rendered} = this.state
-
-    const carPickerClass = classNames('car-picker', {
-      'car-picker--hide': playerCar
-    })
-
-    // Funky rendering optimization
-    if (playerCar) {
-      window.setTimeout(() => {
-        this.setState({
-          rendered: false
-        })
-      }, constants.SLIDE_OUT_TIMEOUT)
-    }
-
-    return (
-      <section>
-        {rendered && (
-          <div className={carPickerClass}>
-            <div className='car-picker__background'>
-              <CarPickerContainer pickCarHandler={this.pickCarHandler} />
-            </div>
+  return (
+    <div className={carPickerClass}>
+      <div className='car-picker__background'>
+        <div className='car-picker__car-selection'>
+          <h1 className='car-picker__header'>
+            Pick your car
+            <span className='car-picker__header-subtext'>For the ride!</span>
+          </h1>
+          <div className='car-picker__box'>
+            <CarPickerPick pickerClass='atruck' pickCarHandler={pickCarHandler} />
           </div>
-        )}
-        {children}
-      </section>
-    )
-  }
-
-  pickCarHandler(carType) {
-    store.dispatch({
-      type: playerActions.SELECT_PLAYER_CAR,
-      value: carType
-    })
-  }
+          <div className='car-picker__box'>
+            <CarPickerPick pickerClass='batmobil' pickCarHandler={pickCarHandler} />
+          </div>
+        </div>
+      </div>
+    </div>
+  )
 }
 
-export default connect(({playerState: {playerCar}}) => ({playerCar}))(CarPicker)
+CarPicker.propTypes = {
+  pickCarHandler: PropTypes.func.isRequired,
+  hide: PropTypes.bool.isRequired
+}
+
+export default CarPicker

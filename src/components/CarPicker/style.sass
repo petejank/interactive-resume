@@ -1,6 +1,7 @@
 @import 'src/assets/styles/variables'
 @import 'src/assets/styles/colors'
 
+
 .car-picker
   position: absolute
   transition: transform .9s ease-out
@@ -10,6 +11,9 @@
   z-index: 7000
 
   @at-root
+    .car-picker--hide
+      transform: translate3d(0, -100vh, 0)
+
     .car-picker__background
       position: relative
       top: 0
@@ -22,5 +26,37 @@
       @media (max-width: $sm-res)
         padding: 10px
 
-    .car-picker--hide
-      transform: translate3d(0, -100vh, 0)
+    .car-picker__car-selection
+      position: relative
+      top: 15%
+      background: $gray-medium
+      width: 600px
+      margin: 0 auto
+      box-shadow: 4px 4px 0 1px $gray-medium-2
+
+      @media (max-width: $sm-res)
+        width: 100%
+        top: 0
+
+    .car-picker__header
+      font-size: 40px
+      text-align: center
+      background: $gray-dark-1
+      border-bottom: 1px solid #fff
+      padding: 5px 10px
+      margin: 0
+      font-weight: normal
+
+    .car-picker__header-subtext
+      display: block
+      font-size: 20px
+      margin: 5px 0
+
+    .car-picker__box
+      width: 50%
+      display: inline-block
+      padding: 15px
+
+      @media (max-width: $sm-res)
+        width: 100%
+        padding: 10px

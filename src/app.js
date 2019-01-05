@@ -5,23 +5,14 @@ import 'assets/styles/base.sass'
 
 import React from 'react'
 import ReactDOM from 'react-dom'
-import {Provider} from 'react-redux'
 
-import PageContext from 'components/PageContext'
-import PageScroll from 'components/PageScroll'
-import CarPicker from 'components/CarPicker'
-import scroll from 'other/scroll'
-import store from 'store'
+import MainContainer from 'components/Main'
+import scroll from 'utils/scroll'
 
 scroll.resetScroll()
 
 ReactDOM.render((
-  <Provider store={store}>
-    <article>
-      <CarPicker>
-        <PageScroll />
-        <PageContext />
-      </CarPicker>
-    </article>
-  </Provider>
+  <article>
+    <MainContainer />
+  </article>
 ), document.getElementById('wrapper'))

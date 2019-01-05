@@ -18,27 +18,29 @@ import PageContextLab from './Lab'
 import PageContextContact from './Contact'
 
 import * as constants from './constants'
-import store from 'store'
 import getCenteredOffset from './utils/getCenteredOffset'
+import {MainContext} from 'store'
 
 export default class PageContext extends PureComponent {
-  componentDidMount() {
-    const unsubscribe = store.subscribe(() => {
-      if (store.getState().playerState.playerCar) {
-        // Center on player's car
-        this.pageElm.style.left = getCenteredOffset(ReactDOM.findDOMNode(this.playerWrapper).getBoundingClientRect())
-        // Restore document's scroll
-        document.body.className += constants.BODY_ACTIVE_CLASS
-        unsubscribe()
-      }
-    })
+  static contextType = MainContext
+
+  componentDidUpdate() {
+    if (this.context.playerCar) {
+      const {pageElm, playerWrapper} = this.refs
+      // Center on player's car
+      pageElm.style.left = getCenteredOffset(ReactDOM.findDOMNode(playerWrapper).getBoundingClientRect())
+      // Restore document's scroll
+      document.body.className = constants.BODY_ACTIVE_CLASS
+    }
   }
 
   render() {
+    const {playerCar} = this.context
+
     return (
-      <div className='page-context' ref={(pageElm) => {this.pageElm = pageElm}}>
-        <Player ref={(playerWrapper) => {this.playerWrapper = playerWrapper}} />
-        <Background>
+      <div className='page-context' ref='pageElm'>
+        <Player ref='playerWrapper' playerCar={playerCar} />
+        <Background playerCar={playerCar}>
           {/* Decorations */}
           <Building buildingClass='tunnel' />
           <Lamps />
