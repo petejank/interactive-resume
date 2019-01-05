@@ -5,7 +5,7 @@ let currentIndex = 0
 export default {
   moveForward() {
     const lastIndex = constants.BACKGROUND_WRAPPER_SUBCLASSES.length - 1
-    return (currentIndex === lastIndex ? lastIndex : ++currentIndex)
+    return currentIndex === lastIndex ? lastIndex : ++currentIndex
   },
   moveBackward() {
     return currentIndex === 0 ? 0 : --currentIndex

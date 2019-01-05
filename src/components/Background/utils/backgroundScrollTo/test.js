@@ -1,42 +1,46 @@
-'use strict';
+import backgroundScrollTo from '.'
+import * as constants from '../../constants'
 
-import BackgroundScrollTo from 'components/Background/BackgroundScrollTo';
-import * as Constants from 'components/Background/Constants';
-
-describe('BackgroundScrollTo', () => {
+describe('backgroundScrollTo', () => {
   beforeEach(() => {
-    BackgroundScrollTo.resetIndex();
-  });
+    backgroundScrollTo.resetIndex()
+  })
 
   it('move forward and backward by one', () => {
-    expect(BackgroundScrollTo.moveForward()).to.be.equal(1);
-    expect(BackgroundScrollTo.moveForward()).to.be.equal(2);
-    expect(BackgroundScrollTo.moveForward()).to.be.equal(3);
-    expect(BackgroundScrollTo.moveForward()).to.be.equal(4);
-    expect(BackgroundScrollTo.moveForward()).to.be.equal(5);
-    expect(BackgroundScrollTo.moveForward()).to.be.equal(6);
-    expect(BackgroundScrollTo.moveForward()).to.be.equal(7);
-    expect(BackgroundScrollTo.moveForward()).to.be.equal(8);
-    expect(BackgroundScrollTo.moveBackward()).to.be.equal(7);
-    expect(BackgroundScrollTo.moveBackward()).to.be.equal(6);
-    expect(BackgroundScrollTo.moveBackward()).to.be.equal(5);
-    expect(BackgroundScrollTo.moveBackward()).to.be.equal(4);
-    expect(BackgroundScrollTo.moveBackward()).to.be.equal(3);
-    expect(BackgroundScrollTo.moveBackward()).to.be.equal(2);
-    expect(BackgroundScrollTo.moveBackward()).to.be.equal(1);
-    expect(BackgroundScrollTo.moveBackward()).to.be.equal(0);
-  });
+    expect(backgroundScrollTo.moveForward()).toBe(1)
+    expect(backgroundScrollTo.moveForward()).toBe(2)
+    expect(backgroundScrollTo.moveForward()).toBe(3)
+    expect(backgroundScrollTo.moveForward()).toBe(4)
+    expect(backgroundScrollTo.moveForward()).toBe(5)
+    expect(backgroundScrollTo.moveForward()).toBe(6)
+    expect(backgroundScrollTo.moveForward()).toBe(7)
+    expect(backgroundScrollTo.moveForward()).toBe(8)
+    expect(backgroundScrollTo.moveBackward()).toBe(7)
+    expect(backgroundScrollTo.moveBackward()).toBe(6)
+    expect(backgroundScrollTo.moveBackward()).toBe(5)
+    expect(backgroundScrollTo.moveBackward()).toBe(4)
+    expect(backgroundScrollTo.moveBackward()).toBe(3)
+    expect(backgroundScrollTo.moveBackward()).toBe(2)
+    expect(backgroundScrollTo.moveBackward()).toBe(1)
+    expect(backgroundScrollTo.moveBackward()).toBe(0)
+  })
 
-  it('move forward won\'t exceed max length', () => {
-    for (let i = 0; i < Constants.BACKGROUND_SUBCLASSES.length; i++) {
-      BackgroundScrollTo.moveForward();
-    }
+  context('when reached last index', () => {
+    it("move forward won't exceed max length", () => {
+      const overloadedIndex = constants.BACKGROUND_WRAPPER_SUBCLASSES.length + 1
+      for (let i = 0; i < overloadedIndex; i++) {
+        backgroundScrollTo.moveForward()
+      }
 
-    expect(BackgroundScrollTo.getIndex()).to.be.equal(Constants.BACKGROUND_SUBCLASSES.length - 1);
-  });
+      expect(backgroundScrollTo.getIndex()).toBe(constants.BACKGROUND_WRAPPER_SUBCLASSES.length - 1)
+    })
+  })
 
-  it('move backward won\'t go below 0', () => {
-    BackgroundScrollTo.moveBackward();
-    expect(BackgroundScrollTo.getIndex()).to.be.equal(0);
-  });
-});
+  context('when at initial index', () => {
+    it("move backward won't go below 0", () => {
+      backgroundScrollTo.moveBackward()
+
+      expect(backgroundScrollTo.getIndex()).toBe(0)
+    })
+  })
+})

@@ -6,9 +6,9 @@ import {Modal as ReactModal} from 'react-bootstrap'
 export default class Modal extends PureComponent {
   static propTypes = {
     children: PropTypes.node.isRequired,
-    modalClass: PropTypes.string,
-    onExited: PropTypes.func,
-    onEnter: PropTypes.func
+    onExited: PropTypes.func.isRequired,
+    onEnter: PropTypes.func.isRequired,
+    modalClass: PropTypes.string
   }
 
   state = {
@@ -32,9 +32,5 @@ export default class Modal extends PureComponent {
 
   close = () => {
     this.setState({showModal: false})
-  }
-
-  open = () => {
-    this.setState({showModal: true})
   }
 }

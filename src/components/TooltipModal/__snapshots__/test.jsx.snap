@@ -1,0 +1,89 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TooltipModal renders <TooltipModal /> 1`] = `
+<Fragment>
+  <button
+    className="tooltip Some tooltip class"
+    onClick={[Function]}
+  >
+    <div
+      className="tooltip__exclamation"
+    >
+      !
+    </div>
+    <div
+      className="tooltip__text-box"
+    >
+      <div
+        className="tooltip__text"
+      >
+        Some tooltip text
+      </div>
+    </div>
+    <div
+      className="tooltip__arrow"
+    />
+  </button>
+</Fragment>
+`;
+
+exports[`TooltipModal when <button /> was clicked shows modal 1`] = `
+<Fragment>
+  <button
+    className="tooltip Some tooltip class"
+    onClick={[Function]}
+  >
+    <div
+      className="tooltip__exclamation"
+    >
+      !
+    </div>
+    <div
+      className="tooltip__text-box"
+    >
+      <div
+        className="tooltip__text"
+      >
+        Some tooltip text
+      </div>
+    </div>
+    <div
+      className="tooltip__arrow"
+    />
+  </button>
+  <Modal
+    modalClass="Some modal class"
+    onEnter={[Function]}
+    onExited={[Function]}
+  >
+    Some children text
+  </Modal>
+</Fragment>
+`;
+
+exports[`TooltipModal when <button /> was clicked when <Modal /> #prop.onExited was called hides modal 1`] = `
+<Fragment>
+  <button
+    className="tooltip Some tooltip class"
+    onClick={[Function]}
+  >
+    <div
+      className="tooltip__exclamation"
+    >
+      !
+    </div>
+    <div
+      className="tooltip__text-box"
+    >
+      <div
+        className="tooltip__text"
+      >
+        Some tooltip text
+      </div>
+    </div>
+    <div
+      className="tooltip__arrow"
+    />
+  </button>
+</Fragment>
+`;

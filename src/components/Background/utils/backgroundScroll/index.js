@@ -1,10 +1,9 @@
 import scroll from 'utils/scroll'
-import * as constants from '../../constants'
+
+const SCROLL_MAX_LEFT = -3705
+const SCROLL_MAX_TOP = -1852
 
 export default (backgroundElm) => {
-  backgroundElm.style = `transform: translate3d(
-    ${scroll.getScrollCompletion() * constants.SCROLL_MAX_LEFT}px,
-    ${scroll.getScrollCompletion() * constants.SCROLL_MAX_TOP}px,
-    0
-  )`
+  const scrollBase = scroll.getScrollCompletion()
+  backgroundElm.style = `transform: translate3d(${scrollBase * SCROLL_MAX_LEFT}px, ${scrollBase * SCROLL_MAX_TOP}px, 0)`
 }

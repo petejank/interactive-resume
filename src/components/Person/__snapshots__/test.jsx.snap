@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Person renders <Person /> 1`] = `
+<div
+  className="person person--boy1-briefcase"
+>
+  Some children text
+</div>
+`;

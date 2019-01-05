@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Building renders <Building /> 1`] = `
+<section>
+  <div
+    className="building building--welcome"
+  >
+    Some child text
+  </div>
+</section>
+`;

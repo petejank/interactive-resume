@@ -1,30 +1,20 @@
-'use strict';
-
-import React from 'react';
-import {shallow} from 'enzyme';
-
-import Person from 'components/Person/Person';
+import React from 'react'
+import {shallow} from 'enzyme'
 
 describe('Person', () => {
-  it('fails to render when {personClass} is not passed', () => {
-    const stub = sinon.stub(console, 'error');
+  it('renders <Person />', () => {
+    const component = render()
 
-    try {
-      shallow(<Person/>);
-    } catch(error) {
-      // Dummy
+    expect(component).toMatchSnapshot()
+  })
+
+  function render() {
+    const defaultProps = {
+      personClass: 'boy1-briefcase',
+      children: 'Some children text'
     }
+    const Person = require('.').default
 
-    expect(stub).to.be.calledOnce;
-    expect(stub.args[0][0]).to.contain(
-      'Warning: Failed prop type: Required prop `personClass` was not specified in `Person`'
-    );
-
-    console.error.restore();
-  });
-
-  it('add {personClass} to person className', () => {
-    const wrapper = shallow(<Person personClass={'jeep'}/>);
-    expect(wrapper.hasClass('person person--jeep')).to.be.true;
-  });
-});
+    return shallow(<Person {...defaultProps} />)
+  }
+})

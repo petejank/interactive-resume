@@ -1,0 +1,107 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Background when device is mobile renders <Background /> with mobile controls 1`] = `
+<Background>
+  <div
+    className="background"
+  >
+    <div
+      className="background__wrapper"
+    >
+      Some child text
+    </div>
+    <button
+      className="background__arrow background__arrow--left"
+      onClick={[Function]}
+    />
+    <div
+      className="background__scroll-info background__scroll-info--mobile"
+    >
+      Tap these arrows to move
+    </div>
+    <button
+      className="background__arrow background__arrow--right"
+      onClick={[Function]}
+    />
+  </div>
+</Background>
+`;
+
+exports[`Background when device is mobile when <button.background__arrow--right /> was clicked moves <Background /> forward and removes "background__scroll-info" 1`] = `
+<Background>
+  <div
+    className="background"
+  >
+    <div
+      className="background__wrapper background__wrapper--welcome"
+    >
+      Some child text
+    </div>
+    <button
+      className="background__arrow background__arrow--left"
+      onClick={[Function]}
+    />
+    <button
+      className="background__arrow background__arrow--right"
+      onClick={[Function]}
+    />
+  </div>
+</Background>
+`;
+
+exports[`Background when device is mobile when <button.background__arrow--right /> was clicked when <button.background__arrow--left /> was clicked moves <Background /> backward 1`] = `
+<Background>
+  <div
+    className="background"
+  >
+    <div
+      className="background__wrapper background__wrapper--tunnel"
+    >
+      Some child text
+    </div>
+    <button
+      className="background__arrow background__arrow--left"
+      onClick={[Function]}
+    />
+    <button
+      className="background__arrow background__arrow--right"
+      onClick={[Function]}
+    />
+  </div>
+</Background>
+`;
+
+exports[`Background when device is not mobile renders <Background /> 1`] = `
+<Background>
+  <div
+    className="background"
+  >
+    <div
+      className="background__wrapper"
+    >
+      Some child text
+    </div>
+    <div
+      className="background__scroll-info"
+    >
+      Scroll to move the car
+    </div>
+  </div>
+</Background>
+`;
+
+exports[`Background when device is not mobile when \`props.playerCar\` has changed when window was scrolled removes "background__scroll-info" 1`] = `
+<Background
+  playerCar="batmobil"
+>
+  <div
+    className="background"
+  >
+    <div
+      className="background__wrapper"
+    >
+      Some child text
+    </div>
+  </div>
+</Background>
+`;

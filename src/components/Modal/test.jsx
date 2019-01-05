@@ -1,76 +1,52 @@
-'use strict';
-
-import React from 'react';
-import {shallow} from 'enzyme';
-import ModalInject from 'inject!components/Modal/Modal';
+import React from 'react'
+import {shallow} from 'enzyme'
 
 describe('Modal', () => {
-  let ModalComp;
+  it('renders <Modal />', () => {
+    const component = render()
 
-  before(() => {
-    ModalComp = ModalInject({
-      'react-bootstrap': {
-        Modal: getModalMockup()
-      }
-    }).default;
-  });
+    expect(component).toMatchSnapshot()
+  })
 
-  it('show modal on init', () => {
-    const wrapper = shallow(<ModalComp/>);
-    expect(wrapper.state('showModal')).to.be.true;
-  });
+  context('when <ReactModal /> #prop.onHide was triggered', () => {
+    it('sets `state.showModal` to `false`', () => {
+      const component = render()
+      component.find('Modal').prop('onHide')()
+      component.update()
 
-  it('attach properties to modal on render', () => {
-    const onEnterFn = () => {};
-    const onExitedFn = () => {};
+      expect(component.state().showModal).toBe(false)
+    })
+  })
 
-    const wrapper = shallow(<ModalComp onExited={onExitedFn} onEnter={onEnterFn}/>);
-    const wrapperInstance = wrapper.instance();
-    expect(wrapper.props().show).to.be.true;
-    expect(wrapper.props().onHide).to.be.equal(wrapperInstance.close);
-    expect(wrapper.props().onExited).to.be.equal(onExitedFn);
-    expect(wrapper.props().onEnter).to.be.equal(onEnterFn);
-  });
+  context('when <ReactModal /> #prop.onExited was triggered', () => {
+    it('calls #props.onExited', () => {
+      const onExited = jest.fn()
+      const component = render({onExited})
+      component.find('Modal').prop('onExited')()
 
-  it('toggle modal display', () => {
-    const wrapper = shallow(<ModalComp/>);
-    const wrapperInstance = wrapper.instance();
-    wrapperInstance.close();
-    expect(wrapper.state('showModal')).to.be.false;
-    wrapperInstance.open();
-    expect(wrapper.state('showModal')).to.be.true;
-  });
+      expect(onExited).toHaveBeenCalledTimes(1)
+    })
+  })
 
-  it('attach class to modal dialog', () => {
-    const wrapper = shallow(<ModalComp/>);
-  });
+  context('when <ReactModal /> #prop.onEnter was triggered', () => {
+    it('calls #props.onEnter', () => {
+      const onEnter = jest.fn()
+      const component = render({onEnter})
+      component.find('Modal').prop('onEnter')()
 
-  it('render passed children', () => {
-    const wrapper = shallow(
-      <ModalComp>
-        <div className="someChildClass"></div>
-      </ModalComp>
-    );
+      expect(onEnter).toHaveBeenCalledTimes(1)
+    })
+  })
 
-    expect(wrapper.find('.someChildClass')).to.have.length(1);
-  });
+  function render(props = {}) {
+    const defaultProps = {
+      children: 'Some children text',
+      modalClass: 'SomeModalClass',
+      onExited: () => {},
+      onEnter: () => {}
+    }
+    const Modal = require('.').default
 
-  function getModalMockup() {
-    const modal = React.createClass({
-      displayName: 'Modal',
-      render() {}
-    });
-
-    modal.Body = React.createClass({
-      displayName: 'ModalBody',
-      render() {}
-    });
-
-    modal.Header = React.createClass({
-      displayName: 'ModalHeader',
-      render() {}
-    });
-
-    return modal;
+    return shallow(<Modal {...defaultProps} {...props} />)
   }
 })

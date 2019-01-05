@@ -1,4 +1,4 @@
-import React, {PureComponent, Fragment} from 'react'
+import React, {PureComponent, Fragment, createRef} from 'react'
 import PropTypes from 'prop-types'
 
 import backgroundScroll from './utils/backgroundScroll'
@@ -15,7 +15,14 @@ export default class Background extends PureComponent {
   state = {
     arrowInterface: isMobile(),
     navigationHint: true,
+    navigationHintVisible: true,
     backgroundWrapperClass: ''
+  }
+
+  constructor(props) {
+    super(props)
+
+    this.backgroundElmRef = createRef()
   }
 
   componentDidUpdate(prevProps) {
@@ -23,11 +30,8 @@ export default class Background extends PureComponent {
     if (this.props.playerCar !== prevProps.playerCar && !this.state.arrowInterface) {
       // Only for desktop interface
       window.addEventListener('scroll', () => {
-        if (this.state.navigationHint) {
-          this._removeInfo()
-        }
-
-        backgroundScroll(this.refs.backgroundElm)
+        this._removeInfo()
+        backgroundScroll(this.backgroundElmRef.current)
       })
     }
   }
@@ -35,7 +39,7 @@ export default class Background extends PureComponent {
   render() {
     return (
       <div className='background'>
-        <div className={'background__wrapper' + this.state.backgroundWrapperClass} ref='backgroundElm'>
+        <div className={'background__wrapper' + this.state.backgroundWrapperClass} ref={this.backgroundElmRef}>
           {this.props.children}
         </div>
         {this._bottomScreenInterface()}
@@ -50,37 +54,42 @@ export default class Background extends PureComponent {
       backgroundWrapperClass: ` ${constants.BACKGROUND_WRAPPER_PREFIX}${constants.BACKGROUND_WRAPPER_SUBCLASSES[subclass]}`
     })
 
-    if (this.state.navigationHint) {
-      this._removeInfo()
-    }
+    this._removeInfo()
   }
 
   _bottomScreenInterface() {
-    if (this.state.arrowInterface) {
+    const {arrowInterface, navigationHintVisible} = this.state
+
+    if (arrowInterface) {
       return (
         <Fragment>
           <button className='background__arrow background__arrow--left' onClick={() => this.move('Backward')} />
-          <div className='background__scroll-info background__scroll-info--mobile' ref='backgroundInterfaceInfo'>
+          {navigationHintVisible && (
+            <div className='background__scroll-info background__scroll-info--mobile'>
               Tap these arrows to move
-          </div>
+            </div>
+          )}
           <button className='background__arrow background__arrow--right' onClick={() => this.move('Forward')} />
         </Fragment>
       )
     }
 
     return (
-      <div className='background__scroll-info' ref='backgroundInterfaceInfo'>
+      navigationHintVisible && (
+        <div className='background__scroll-info'>
           Scroll to move the car
-      </div>
+        </div>
+      )
     )
   }
 
   _removeInfo() {
+    if (!this.state.navigationHint) return
+
     this.setState({navigationHint: false})
     // Remove scroll info
     window.setTimeout(() => {
-      const {backgroundInterfaceInfo} = this.refs
-      backgroundInterfaceInfo.parentNode.removeChild(backgroundInterfaceInfo)
+      this.setState({navigationHintVisible: false})
     }, constants.BACKGROUND_INFO_TIMEOUT)
   }
 }

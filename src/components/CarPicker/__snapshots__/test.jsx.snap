@@ -1,0 +1,83 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CarPicker renders <CarPicker /> 1`] = `
+<div
+  className="car-picker"
+>
+  <div
+    className="car-picker__background"
+  >
+    <div
+      className="car-picker__car-selection"
+    >
+      <h1
+        className="car-picker__header"
+      >
+        Pick your car
+        <span
+          className="car-picker__header-subtext"
+        >
+          For the ride!
+        </span>
+      </h1>
+      <div
+        className="car-picker__box"
+      >
+        <CarPickerPick
+          pickCarHandler={[Function]}
+          pickerClass="atruck"
+        />
+      </div>
+      <div
+        className="car-picker__box"
+      >
+        <CarPickerPick
+          pickCarHandler={[Function]}
+          pickerClass="batmobil"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`CarPicker when \`props.hide\` is \`true\` renders <CarPicker /> with "car-picker--hide" class 1`] = `
+<div
+  className="car-picker car-picker--hide"
+>
+  <div
+    className="car-picker__background"
+  >
+    <div
+      className="car-picker__car-selection"
+    >
+      <h1
+        className="car-picker__header"
+      >
+        Pick your car
+        <span
+          className="car-picker__header-subtext"
+        >
+          For the ride!
+        </span>
+      </h1>
+      <div
+        className="car-picker__box"
+      >
+        <CarPickerPick
+          pickCarHandler={[Function]}
+          pickerClass="atruck"
+        />
+      </div>
+      <div
+        className="car-picker__box"
+      >
+        <CarPickerPick
+          pickCarHandler={[Function]}
+          pickerClass="batmobil"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;

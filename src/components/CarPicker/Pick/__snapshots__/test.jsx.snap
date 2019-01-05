@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CarPickerPick renders <CarPickerPick /> 1`] = `
+<div
+  className="car-picker-pick"
+>
+  <div
+    className="car-picker-pick__box"
+  >
+    <div
+      className="car-picker-pick__graphic"
+    >
+      <div
+        className="car-picker-pick__batmobil"
+      />
+    </div>
+    <div
+      className="car-picker-pick__text"
+    >
+      90s Batmobil
+    </div>
+  </div>
+  <button
+    className="car-picker-pick__button"
+    onClick={[Function]}
+  >
+    Batman!
+  </button>
+</div>
+`;

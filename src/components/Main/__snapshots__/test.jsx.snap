@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MainContainer renders <MainContainer /> 1`] = `
+<section>
+  <ContextProvider
+    value={
+      Object {
+        "playerCar": null,
+      }
+    }
+  >
+    <CarPicker
+      hide={false}
+      pickCarHandler={[Function]}
+    />
+    <PageScroll />
+    <PageContext />
+  </ContextProvider>
+</section>
+`;

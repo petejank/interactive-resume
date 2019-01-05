@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Vehicle renders <Vehicle /> 1`] = `
+<div
+  className="vehicle vehicle--batmobil"
+/>
+`;

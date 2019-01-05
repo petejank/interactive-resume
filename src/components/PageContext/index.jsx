@@ -1,4 +1,4 @@
-import React, {PureComponent} from 'react'
+import React, {PureComponent, createRef} from 'react'
 import ReactDOM from 'react-dom'
 
 import Background from 'components/Background'
@@ -24,12 +24,21 @@ import {MainContext} from 'store'
 export default class PageContext extends PureComponent {
   static contextType = MainContext
 
+  state = {
+    pageContextTransform: null
+  }
+
+  constructor(props) {
+    super(props)
+
+    this.playerWrapperRef = createRef()
+  }
+
   componentDidUpdate() {
-    if (this.context.playerCar) {
-      const {pageElm, playerWrapper} = this.refs
+    if (this.context.playerCar && !this.state.pageContextTransform) {
       // Center on player's car
-      const positionX = getCenteredOffset(ReactDOM.findDOMNode(playerWrapper).getBoundingClientRect())
-      pageElm.style = `transform: translate3D(${positionX}, 0, 0)`
+      const positionX = getCenteredOffset(ReactDOM.findDOMNode(this.playerWrapperRef.current).getBoundingClientRect())
+      this.setState({pageContextTransform: `translate3D(${positionX}, 0, 0)`})
       // Restore document's scroll
       document.body.className = constants.BODY_ACTIVE_CLASS
     }
@@ -37,10 +46,11 @@ export default class PageContext extends PureComponent {
 
   render() {
     const {playerCar} = this.context
+    const {pageContextTransform} = this.state
 
     return (
-      <div className='page-context' ref='pageElm'>
-        <Player ref='playerWrapper' playerCar={playerCar} />
+      <div className='page-context' style={{transform: pageContextTransform}}>
+        <Player playerCar={playerCar} ref={this.playerWrapperRef} />
         <Background playerCar={playerCar}>
           {/* Decorations */}
           <Building buildingClass='tunnel' />
