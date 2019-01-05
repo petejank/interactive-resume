@@ -1,4 +1,4 @@
-const PAGE_CONTEXT_CENTER_MOD = 450
+const PAGE_CONTEXT_CENTER_MOD = 300
 const NEW_OFFSET_FIX = 20
 
 export default (playerOffsets) => {
