@@ -28,7 +28,8 @@ export default class PageContext extends PureComponent {
     if (this.context.playerCar) {
       const {pageElm, playerWrapper} = this.refs
       // Center on player's car
-      pageElm.style.left = getCenteredOffset(ReactDOM.findDOMNode(playerWrapper).getBoundingClientRect())
+      const positionX = getCenteredOffset(ReactDOM.findDOMNode(playerWrapper).getBoundingClientRect())
+      pageElm.style = `transform: translate3D(${positionX}, 0, 0)`
       // Restore document's scroll
       document.body.className = constants.BODY_ACTIVE_CLASS
     }
