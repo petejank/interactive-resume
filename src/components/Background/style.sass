@@ -1,5 +1,6 @@
 @import '~Background.sass'
 @import 'src/assets/styles/mixins/screens'
+@import 'src/assets/styles/z-index'
 @import 'src/assets/styles/variables'
 
 .background
@@ -53,7 +54,7 @@
       bottom: 5%
       width: 0
       height: 0
-      z-index: 10000
+      z-index: $z-index-background-arrow
       opacity: .8
       background: none
       outline: 0
@@ -89,7 +90,7 @@
       background: #000
       padding: 10px
       text-align: center
-      z-index: 10000
+      z-index: $z-index-background-arrow
 
       +sm-res-max
         font-size: 19px

@@ -1,6 +1,7 @@
 @import 'src/assets/styles/mixins/screens'
 @import 'src/assets/styles/colors'
 @import 'src/assets/styles/variables'
+@import 'src/assets/styles/z-index'
 
 .tooltip
   position: absolute
@@ -13,7 +14,7 @@
   background: $gray-dark
   border: 1px solid #fff
   transform: translateX(50%)
-  z-index: 6000
+  z-index: $z-index-tooltip
 
   +sm-res-min
     border-color: $gray-light

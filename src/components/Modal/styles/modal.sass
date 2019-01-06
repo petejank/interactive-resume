@@ -5,6 +5,7 @@
 @import '~bootstrap-sass/assets/stylesheets/bootstrap/modals'
 @import 'src/assets/styles/mixins/screens'
 @import 'src/assets/styles/variables'
+@import 'src/assets/styles/z-index'
 @import 'modal-newspaper'
 @import 'modal-xp'
 @import 'modal-webdev'
@@ -14,7 +15,7 @@
 @import 'modal-contact'
 
 .modal
-  z-index: 21000
+  z-index: $z-index-modal
 
   &.fade
     +sm-res-max
@@ -28,7 +29,7 @@
 
     .close
       position: relative
-      z-index: 22000
+      z-index: $z-index-modal-close
       color: #fff
       text-shadow: none
       opacity: 1
@@ -37,7 +38,7 @@
         color: #000
 
 .modal-backdrop
-  z-index: 20000
+  z-index: $z-index-backdrop
 
   &.fade
     +sm-res-max

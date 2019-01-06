@@ -1,6 +1,7 @@
 @import 'src/assets/styles/variables'
 @import 'src/assets/styles/colors'
 @import 'src/assets/styles/mixins/screens'
+@import 'src/assets/styles/z-index'
 
 .car-picker
   position: absolute
@@ -8,7 +9,7 @@
   top: 0
   left: 0
   transform: translate3d(0, 0, 0)
-  z-index: 7000
+  z-index: $z-index-car-picker
 
   @at-root
     .car-picker--hide
