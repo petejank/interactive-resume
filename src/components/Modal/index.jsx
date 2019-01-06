@@ -7,7 +7,7 @@ export default class Modal extends PureComponent {
   static propTypes = {
     children: PropTypes.node.isRequired,
     onExited: PropTypes.func.isRequired,
-    onEnter: PropTypes.func.isRequired,
+    onEnter: PropTypes.func,
     modalClass: PropTypes.string
   }
 
@@ -20,8 +20,13 @@ export default class Modal extends PureComponent {
     const dialogClassName = classNames({[modalClass]: modalClass})
 
     return (
-      <ReactModal show={this.state.showModal} onHide={this.close} onExited={onExited}
-        onEnter={onEnter} dialogClassName={dialogClassName}>
+      <ReactModal
+        show={this.state.showModal}
+        onHide={this.close}
+        onExited={onExited}
+        onEnter={onEnter}
+        dialogClassName={dialogClassName}
+      >
         <ReactModal.Header closeButton closeLabel='' />
         <ReactModal.Body>
           {children}

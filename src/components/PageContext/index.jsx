@@ -25,7 +25,7 @@ export default class PageContext extends PureComponent {
   static contextType = MainContext
 
   state = {
-    pageContextTransform: null
+    positionFix: null
   }
 
   constructor(props) {
@@ -35,21 +35,22 @@ export default class PageContext extends PureComponent {
   }
 
   componentDidUpdate() {
-    if (this.context.playerCar && !this.state.pageContextTransform) {
+    if (this.context.playerCar && !this.state.positionFix) {
       // Center on player's car
-      const positionX = getCenteredOffset(ReactDOM.findDOMNode(this.playerWrapperRef.current).getBoundingClientRect())
-      this.setState({pageContextTransform: `translate3D(${positionX}, 0, 0)`})
-      // Restore document's scroll
+      const positionFix = getCenteredOffset(ReactDOM.findDOMNode(this.playerWrapperRef.current).getBoundingClientRect())
+      this.setState({positionFix})
+
+      // Restore document's scrollability
       document.body.className = constants.BODY_ACTIVE_CLASS
     }
   }
 
   render() {
     const {playerCar} = this.context
-    const {pageContextTransform} = this.state
+    const {positionFix} = this.state
 
     return (
-      <div className='page-context' style={{transform: pageContextTransform}}>
+      <div className='page-context' style={positionFix}>
         <Player playerCar={playerCar} ref={this.playerWrapperRef} />
         <Background playerCar={playerCar}>
           {/* Decorations */}

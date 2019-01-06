@@ -3,11 +3,7 @@
 exports[`PageContext renders <PageContext /> 1`] = `
 <div
   className="page-context"
-  style={
-    Object {
-      "transform": null,
-    }
-  }
+  style={null}
 >
   <Player />
   <Background>
