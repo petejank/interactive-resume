@@ -1,7 +1,7 @@
 import isMobile from 'utils/isMobile'
 
 const LEFT_CENTER_MOD = 300
-const LEFT_MOBILE_CENTER_MOD = 50
+const LEFT_MOBILE_CENTER_MOD = 60
 const NEW_OFFSET_FIX = 20
 
 // TODO:
