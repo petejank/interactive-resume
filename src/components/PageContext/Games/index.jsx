@@ -3,7 +3,7 @@ import React from 'react'
 import TooltipModal from 'components/TooltipModal'
 
 const PageContextGames = () => (
-  <TooltipModal tooltipText='Games development' modalClass='modal-dialog-games'>
+  <TooltipModal tooltipText='Anyone up for a game?' modalClass='modal-dialog-games'>
     <section>
       <div className='page-context-games'>
         <header>

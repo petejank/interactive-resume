@@ -3,7 +3,7 @@ import React from 'react'
 import TooltipModal from 'components/TooltipModal'
 
 const PageContextWebdev = () => (
-  <TooltipModal tooltipText='Web development' modalClass='modal-dialog-webdev'>
+  <TooltipModal tooltipText='Check out those webdev skills' modalClass='modal-dialog-webdev'>
     <section>
       <div className='page-context-webdev'>
         <header>

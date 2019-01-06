@@ -3,7 +3,7 @@ import React from 'react'
 import TooltipModal from 'components/TooltipModal'
 
 const PageContextMobile = () => (
-  <TooltipModal tooltipText='Mobile development' modalClass='modal-dialog-mobile'>
+  <TooltipModal tooltipText='Selfie... I mean mobile apps time' modalClass='modal-dialog-mobile'>
     <section>
       <div className='page-context-mobile'>
         <header>

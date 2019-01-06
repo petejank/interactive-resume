@@ -6,7 +6,7 @@ import entries from './utils/entries'
 import oldEntries from './utils/oldEntries'
 
 const PageContextLabel = () => (
-  <TooltipModal tooltipText='Private projects' modalClass='modal-dialog-lab'>
+  <TooltipModal tooltipText='Quickly, drink this!' modalClass='modal-dialog-lab'>
     <section>
       <div className='page-context-lab'>
         <header>
