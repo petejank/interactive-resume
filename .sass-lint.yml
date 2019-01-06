@@ -33,7 +33,14 @@ rules:
     -
       allow-leading-underscore: false
       convention: hyphenatedlowercase
-  mixins-before-declarations: 2
+  mixins-before-declarations:
+    - 2
+    -
+      exclude:
+        - sm-res-max
+        - sm-res-min
+        - l-res-max
+        - l-res-min
   nesting-depth: 2
   no-attribute-selectors: 2
   no-color-keywords: 0

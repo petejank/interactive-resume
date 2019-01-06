@@ -1,4 +1,5 @@
-@import 'src/assets/styles/headers'
+@import 'src/assets/styles/mixins/headers'
+@import 'src/assets/styles/mixins/screens'
 @import 'src/assets/styles/colors'
 @import 'src/assets/styles/variables'
 
@@ -12,7 +13,7 @@ $light-blue: #589fc7
   border: 2px solid $light-blue
   border-radius: 3px
 
-  @media (min-width: $sm-res)
+  +sm-res-min
     box-shadow: 0 4px 0 1px #244152
 
   @at-root

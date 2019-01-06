@@ -3,6 +3,7 @@
 @import '~bootstrap-sass/assets/stylesheets/bootstrap/component-animations'
 @import '~bootstrap-sass/assets/stylesheets/bootstrap/close'
 @import '~bootstrap-sass/assets/stylesheets/bootstrap/modals'
+@import 'src/assets/styles/mixins/screens'
 @import 'src/assets/styles/variables'
 @import 'modal-newspaper'
 @import 'modal-xp'
@@ -16,7 +17,7 @@
   z-index: 21000
 
   &.fade
-    @media (max-width: $sm-res)
+    +sm-res-max
       transition: none
 
       .modal-dialog
@@ -39,5 +40,5 @@
   z-index: 20000
 
   &.fade
-    @media (max-width: $sm-res)
+    +sm-res-max
       transition: none

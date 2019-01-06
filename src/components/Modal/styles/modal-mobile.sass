@@ -1,5 +1,6 @@
 @import 'src/assets/styles/colors'
 @import 'src/assets/styles/variables'
+@import 'src/assets/styles/mixins/screens'
 
 .modal-dialog-mobile
   .modal-content
@@ -8,7 +9,7 @@
     background: #464646
     box-shadow: none
 
-    @media (min-width: $sm-res)
+    +sm-res-min
       box-shadow: 0 6px 0 0 $gray-medium-2
 
   .modal-body

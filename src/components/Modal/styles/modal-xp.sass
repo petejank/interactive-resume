@@ -1,4 +1,5 @@
 @import 'src/assets/styles/colors'
+@import 'src/assets/styles/mixins/screens'
 
 .modal-dialog-xp
   .modal-content
@@ -10,7 +11,7 @@
     background: #777373
     box-shadow: none
 
-    @media (min-width: $sm-res)
+    +sm-res-min
       box-shadow: inset 0 0 0 1px $gray-light-1
 
   .modal-header

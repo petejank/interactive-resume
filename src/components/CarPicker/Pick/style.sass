@@ -1,7 +1,8 @@
-@import 'src/assets/styles/variables'
-@import 'src/assets/styles/colors'
 @import '~CarPicker.sass'
 @import '~Player.sass'
+@import 'src/assets/styles/variables'
+@import 'src/assets/styles/mixins/screens'
+@import 'src/assets/styles/colors'
 
 .car-picker-pick
   text-align: center
@@ -45,7 +46,7 @@
       box-shadow: 3px 3px 0 1px $gray-medium-1
       background: $red-medium
 
-      @media (max-width: $sm-res)
+      +sm-res-max
         margin-top: 10px
 
       &:hover

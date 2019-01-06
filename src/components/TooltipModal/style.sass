@@ -1,3 +1,4 @@
+@import 'src/assets/styles/mixins/screens'
 @import 'src/assets/styles/colors'
 @import 'src/assets/styles/variables'
 
@@ -14,7 +15,7 @@
   transform: translateX(50%)
   z-index: 6000
 
-  @media (min-width: $sm-res)
+  +sm-res-min
     border-color: $gray-light
     animation: tooltip-move 1.5s infinite ease-in-out
     opacity: .85
@@ -57,7 +58,7 @@
       top: 100%
       right: 50%
 
-      @media (min-width: $sm-res)
+      +sm-res-min
         animation: tooltip-move-building 1.5s infinite ease-in-out
 
 @keyframes tooltip-move

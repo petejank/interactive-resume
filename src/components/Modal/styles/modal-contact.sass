@@ -1,5 +1,6 @@
 @import 'src/assets/styles/colors'
 @import 'src/assets/styles/variables'
+@import 'src/assets/styles/mixins/screens'
 
 .modal-dialog-contact
   .modal-content
@@ -8,5 +9,5 @@
     background: #b34c4c
     box-shadow: none
 
-    @media (min-width: $sm-res)
+    +sm-res-min
       box-shadow: 4px 4px 0 1px $gray-medium-3
