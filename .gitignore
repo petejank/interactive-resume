@@ -1,6 +1,7 @@
-node_modules/
-dist/
-spritesmith/
+node_modules
+dist
+spritesmith
+coverage
 npm-debug.log
 yarn-error.log
 deploy.sh
