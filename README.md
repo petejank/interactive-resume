@@ -12,8 +12,11 @@ Just type `yarn <taskNameHere>`. Tasks list:
 
 - `watch` - build project in development mode and initialize a watcher,
 - `build` - build project for development purposes,
-- `build-prod` - build project using production settings,
-- `test` - run karma to process all available tests.
+- `build:prod` - build project using production settings,
+- `test` - run Jest to process all available tests,
+- `test:coverage` - run Jest and return test coverage report,
+- `lint` - lints `*.js` and `*.jsx` files,
+- `lint-sass` - lints `*.sass` files.
 
 ## License
 
