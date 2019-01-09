@@ -27,19 +27,21 @@ export default class PageContextXpAccordion extends PureComponent {
     )
   }
 
-  _accordionHeader(historyEntry) {
+  _accordionHeader({timespan, jobTitle, company}) {
     return (
       <Fragment>
         <div className='page-context-accordion__left-info'>
-          {historyEntry.timespan}
+          {timespan}
         </div>
         <div className='page-context-accordion__text-box'>
           <div className='page-context-accordion__text'>
-            {historyEntry.jobTitle}
+            {jobTitle}
           </div>
-          <div className='page-context-accordion__text'>
-            {historyEntry.company}
-          </div>
+          {company && (
+            <div className='page-context-accordion__text'>
+              {company}
+            </div>
+          )}
         </div>
       </Fragment>
     )

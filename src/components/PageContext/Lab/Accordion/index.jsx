@@ -34,15 +34,15 @@ export default class PageContextLabAccordion extends PureComponent {
     )
   }
 
-  _accordionHeader(entry) {
+  _accordionHeader({type, title}) {
     return (
       <Fragment>
         <div className='page-context-accordion__left-info accordion__left-info--right'>
-          {entry.type}
+          {type}
         </div>
         <div className='page-context-accordion__text-box'>
           <div className='page-context-accordion__text'>
-            {entry.title}
+            {title}
           </div>
         </div>
       </Fragment>

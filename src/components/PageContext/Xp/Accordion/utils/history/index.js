@@ -8,7 +8,6 @@ export default [
   },
   {
     timespan: '06.2014 - 10.2016',
-    company: '-',
     jobTitle: 'Private Projects Development',
     description: 'Created this interactive resume, Space Rabbit Unity3D mobile game and Tiny Life Counter hybrid application'
   },
