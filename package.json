@@ -72,6 +72,6 @@
     "react-dom": "^16.11.0",
     "whatwg-fetch": "^3.0.0"
   },
-  "author": "",
+  "author": "Piotr Jankowski",
   "license": "MIT AND CC-BY-3.0"
 }
