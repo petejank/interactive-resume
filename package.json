@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "watch": "rm -rf dist && webpack-dev-server",
-    "build": "rm -rf dist && webpack",
+    "build": "rm -rf dist && NODE_ENV=development webpack",
     "build:prod": "rm -rf dist && NODE_ENV=production webpack",
     "lint": "eslint src --ext .js,.jsx",
     "lint-sass": "sass-lint -qv",
