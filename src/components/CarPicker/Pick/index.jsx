@@ -3,13 +3,13 @@ import PropTypes from 'prop-types'
 import classNames from 'classnames'
 
 const pickTexts = {
-  'batmobil': '90s Batmobil',
-  'atruck': 'A-team Truck'
+  batmobil: '90s Batmobil',
+  atruck: 'A-team Truck'
 }
 
 const buttonTexts = {
-  'batmobil': 'Batman!',
-  'atruck': 'Hannibal!'
+  batmobil: 'Batman!',
+  atruck: 'Hannibal!'
 }
 
 export default class CarPickerPick extends PureComponent {

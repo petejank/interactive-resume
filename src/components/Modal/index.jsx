@@ -22,7 +22,7 @@ export default class Modal extends PureComponent {
     return (
       <ReactModal
         show={this.state.showModal}
-        onHide={this.close}
+        onHide={this.handleClose}
         onExited={onExited}
         onEnter={onEnter}
         dialogClassName={dialogClassName}
@@ -35,7 +35,7 @@ export default class Modal extends PureComponent {
     )
   }
 
-  close = () => {
+  handleClose = () => {
     this.setState({showModal: false})
   }
 }

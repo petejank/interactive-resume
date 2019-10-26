@@ -1,4 +1,4 @@
-import React, {PureComponent, Fragment} from 'react'
+import React, {PureComponent} from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
 
@@ -24,8 +24,8 @@ export default class TooltipModal extends PureComponent {
     })
 
     return (
-      <Fragment>
-        <button className={tooltipClass} onClick={this.showModal}>
+      <>
+        <button className={tooltipClass} onClick={this.handleClick}>
           <div className='tooltip__exclamation'>!</div>
           <div className='tooltip__text-box'>
             <div className='tooltip__text'>{tooltipText}</div>
@@ -33,19 +33,19 @@ export default class TooltipModal extends PureComponent {
           <div className='tooltip__arrow' />
         </button>
         {this.state.showModal && (
-          <Modal onExited={this.removeModal} onEnter={enterCallback} modalClass={modalClass}>
+          <Modal onExited={this.handleExited} onEnter={enterCallback} modalClass={modalClass}>
             {children}
           </Modal>
         )}
-      </Fragment>
+      </>
     )
   }
 
-  showModal = () => {
+  handleClick = () => {
     this.setState({showModal: true})
   }
 
-  removeModal = () => {
+  handleExited = () => {
     this.setState({showModal: false})
   }
 }

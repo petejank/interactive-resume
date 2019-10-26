@@ -23,8 +23,9 @@ const PageContextGames = () => (
             </h3>
             <p>
               This is an arcade machine. Back in the days we used to play old school games on them, like Pac-Man and stuff.
-              <span className='page-context-games__emboss'> I enjoy developing small
-              games and tinkering with game engines, below you'll find tiny list of technologies I use</span>.
+              <span className='page-context-games__emboss'>
+                I enjoy developing small games and tinkering with game engines, below you'll find tiny list of technologies I use
+              </span>.
             </p>
           </div>
         </section>

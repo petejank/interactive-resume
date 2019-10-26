@@ -1,4 +1,4 @@
-import React, {PureComponent, Fragment} from 'react'
+import React, {PureComponent} from 'react'
 import PropTypes from 'prop-types'
 
 import {PanelGroup, Panel} from 'react-bootstrap'
@@ -36,7 +36,7 @@ export default class PageContextLabAccordion extends PureComponent {
 
   _accordionHeader({type, title}) {
     return (
-      <Fragment>
+      <>
         <div className='page-context-accordion__left-info accordion__left-info--right'>
           {type}
         </div>
@@ -45,7 +45,7 @@ export default class PageContextLabAccordion extends PureComponent {
             {title}
           </div>
         </div>
-      </Fragment>
+      </>
     )
   }
 }

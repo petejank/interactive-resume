@@ -19,8 +19,12 @@ export default class PageContextContact extends PureComponent {
     const {name, senderEmail, message, status} = this.state
 
     return (
-      <TooltipModal tooltipText='Contact the author' modalClass='modal-dialog-contact'
-        additionalClass='tooltip--building' enterCallback={this.modalEnter}>
+      <TooltipModal
+        tooltipText='Contact the author'
+        modalClass='modal-dialog-contact'
+        additionalClass='tooltip--building'
+        enterCallback={this.modalEnter}
+      >
         <section>
           <header>
             <div className='page-context-contact'>
@@ -42,8 +46,12 @@ export default class PageContextContact extends PureComponent {
           )}
           <div className='page-context-contact__twitter'>
             You can also contact me on Twitter:
-            <a href='https://twitter.com/likeadev' className='twitter-follow-button not-rendered' data-show-count='false'
-              data-size='large'>
+            <a
+              href='https://twitter.com/likeadev'
+              className='twitter-follow-button not-rendered'
+              data-show-count='false'
+              data-size='large'
+            >
               Follow @likeadev
             </a>
           </div>
@@ -56,7 +64,7 @@ export default class PageContextContact extends PureComponent {
               className='page-context-contact__form-input'
               name='name'
               value={name}
-              onChange={this.inputChange}
+              onChange={this.handleChange}
             />
             <label htmlFor='contact-email' className='page-context-contact__form-label'>
               E-mail:
@@ -66,7 +74,7 @@ export default class PageContextContact extends PureComponent {
               className='page-context-contact__form-input'
               name='senderEmail'
               value={senderEmail}
-              onChange={this.inputChange}
+              onChange={this.handleChange}
             />
             <label htmlFor='contact-message' className='page-context-contact__form-label'>
               Message:
@@ -76,7 +84,7 @@ export default class PageContextContact extends PureComponent {
               className='page-context-contact__form-input page-context-contact__form-input--textarea'
               name='message'
               value={message}
-              onChange={this.inputChange}
+              onChange={this.handleChange}
             />
             <button className='page-context-contact__form-submit' type='submit'>Send</button>
             {status === 'sending' && (
@@ -117,7 +125,7 @@ export default class PageContextContact extends PureComponent {
     }
   }
 
-  inputChange = ({target: {name, value}}) => {
+  handleChange = ({target: {name, value}}) => {
     this.setState({
       payload: {
         ...this.state.payload,

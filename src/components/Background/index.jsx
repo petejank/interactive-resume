@@ -1,4 +1,4 @@
-import React, {PureComponent, Fragment, createRef} from 'react'
+import React, {PureComponent, createRef} from 'react'
 import PropTypes from 'prop-types'
 
 import backgroundScroll from './utils/backgroundScroll'
@@ -62,7 +62,7 @@ export default class Background extends PureComponent {
 
     if (arrowInterface) {
       return (
-        <Fragment>
+        <>
           <button className='background__arrow background__arrow--left' onClick={() => this.move('Backward')} />
           {navigationHintVisible && (
             <div className='background__scroll-info background__scroll-info--mobile'>
@@ -70,7 +70,7 @@ export default class Background extends PureComponent {
             </div>
           )}
           <button className='background__arrow background__arrow--right' onClick={() => this.move('Forward')} />
-        </Fragment>
+        </>
       )
     }
 
