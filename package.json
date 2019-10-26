@@ -1,6 +1,6 @@
 {
   "name": "interactive-resume",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "A pixel art interactive resume",
   "main": "app.js",
   "scripts": {
