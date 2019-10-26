@@ -5,6 +5,11 @@ It's my personal interactive resume project developed with ReactJS and tiny bit 
 
 Live version is available at http://jankowskiresume.com.
 
+## Requirements
+
+- `Node.js >= 10.0.0`
+- `Yarn >= 1.0.0`
+
 ## Available run scripts
 Remember to first install required node dependencies through `yarn install`.
 
