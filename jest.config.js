@@ -1,6 +1,6 @@
 module.exports = {
   collectCoverageFrom: [`src/**/*.{js,jsx}`],
-  setupTestFrameworkScriptFile: '<rootDir>/jest/setupTests.js',
+  setupFilesAfterEnv: ['<rootDir>/jest/setupTests.js'],
   setupFiles: ['jest-plugin-context/setup'],
   snapshotSerializers: ['enzyme-to-json/serializer'],
   transform: {
