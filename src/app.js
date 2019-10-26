@@ -1,4 +1,5 @@
-import '@babel/polyfill'
+import 'core-js/stable'
+import 'regenerator-runtime/runtime'
 import 'whatwg-fetch'
 
 import 'assets/styles/base.sass'

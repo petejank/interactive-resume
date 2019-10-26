@@ -62,9 +62,9 @@
     "webpack-spritesmith": "^1.0.2"
   },
   "dependencies": {
-    "@babel/polyfill": "^7.6.0",
     "bootstrap-sass": "^3.4.1",
     "classnames": "^2.2.5",
+    "core-js": "^3.3.4",
     "normalize.css": "^8.0.1",
     "prop-types": "^15.7.2",
     "react": "^16.11.0",
