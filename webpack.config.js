@@ -15,7 +15,7 @@ module.exports = {
   context: __dirname,
   entry: './src/app.js',
   mode: process.env.NODE_ENV || 'development',
-  devtool: isProduction ? 'source-map' : 'inline-source-map',
+  devtool: isProduction ? 'source-map' : 'eval-source-map',
   resolve: {
     extensions: ['.js', '.jsx'],
     modules: ['node_modules', 'spritesmith', path.resolve('./src')]
