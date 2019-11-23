@@ -2,7 +2,7 @@ const autoprefixer = require('autoprefixer')
 const path = require('path')
 const webpack = require('webpack')
 
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
+const TerserPlugin = require('terser-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
@@ -25,16 +25,11 @@ module.exports = {
     filename: isProduction ? '[name].[hash].js' : '[name].js'
   },
   optimization: {
+    minimize: true,
     minimizer: [
-      new UglifyJsPlugin({
-        parallel: true,
+      new TerserPlugin({
         sourceMap: true,
-        uglifyOptions: {
-          warnings: false,
-          output: {
-            comments: false
-          }
-        }
+        extractComments: true
       })
     ]
   },
