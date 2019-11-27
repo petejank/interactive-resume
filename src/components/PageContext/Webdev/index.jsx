@@ -10,27 +10,30 @@ const PageContextWebdev = () => (
           <h2 className='page-context-webdev__header'>
             Web development skills
           </h2>
-          <p className='page-context-webdev__subheader'>Both in front-end and back-end</p>
+          <p className='page-context-webdev__subheader'>Both front-end and back-end</p>
         </header>
         <p>
-          Below are listed all languages/technologies I currently use.
-          <span className='emboss-dark-yellow'> Most of my attention is focused on front side of the web:</span>
+          Currently I use following technologies/languages:
         </p>
         <ul>
-          <li>HTML/CSS (SASS/Stylus mostly)</li>
+          <li>HTML/CSS (SASS/JSS/Stylus)</li>
           <li>Vanilla JavaScript</li>
-          <li>ReactJS with Redux</li>
+          <li>TypeScript</li>
+          <li>React with Redux</li>
+          <li>Vue.js with Vuex</li>
           <li>Jest</li>
-          <li>Node.js</li>
-          <li>Postgres</li>
+          <li>Node.js with Express</li>
+          <li>Yarn</li>
+          <li>Electron</li>
           <li>Webpack</li>
+          <li>Docker</li>
+          <li>Postgres</li>
           <li>Python</li>
           <li>Tiny amounts of Ruby/Rails</li>
           <li>Git</li>
         </ul>
         <p>
-          Here you'll find things that
-          <span className='emboss-dark-yellow'> I have used in the past and still know the drill. </span>
+          Here are the things that I used in the past:
         </p>
         <ul>
           <li>AngularJS</li>
