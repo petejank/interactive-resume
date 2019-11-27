@@ -20,13 +20,12 @@ const PageContextNewspaper = () => (
               Who am I?
             </h3>
             <p>
-              My name is Piotr, and I am a developer with strong focus on front-end, though I'm not limiting myself only
-              to this area of expertise.
+              My name is Piotr, and I am a full-stack developer.
             </p>
           </section>
           <section>
             <h3 className='page-context-newspaper__section-header'>
-              So, what is your profession?
+              So, what do you do?
             </h3>
             <p>
               I enjoy making web applications, hybrid mobile apps and sometimes games. Last one currently for pure fun.
