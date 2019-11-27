@@ -13,8 +13,7 @@ const PageContextMobile = () => (
           <p className='page-context-mobile__subheader'>Tapping is pretty popular nowadays</p>
         </header>
         <p>
-          Here's
-          <span className='emboss-dark-yellow'>
+          Here's <span className='emboss-dark-yellow'>
             a small assembly of languages/techs I use to make mobile tapping magic happen.
           </span>
         </p>
